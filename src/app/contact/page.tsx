@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import ContactForm from "@/components/ContactForm";
+import { Zap, Target } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Contact Us",
@@ -82,7 +83,7 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-32 pb-16 bg-gradient-hero overflow-hidden" aria-label="Contact hero">
+      <section className="relative pt-32 pb-20 bg-gradient-hero overflow-hidden" aria-label="Contact hero">
         <div className="absolute inset-0 geo-bg opacity-30" aria-hidden="true" />
         <div className="absolute top-24 right-12 w-36 h-36 hex-clip bg-[var(--color-gold)]/8 animate-float" aria-hidden="true" />
         <div className="absolute bottom-8 left-8 w-24 h-24 hex-clip bg-[var(--color-gold)]/5 animate-float" style={{ animationDelay: "1s" }} aria-hidden="true" />
@@ -159,8 +160,8 @@ export default function ContactPage() {
 
               {/* Quick Response Badge */}
               <div className="bg-white rounded-2xl border border-[var(--color-green-dark)]/10 p-6 flex items-center gap-4">
-                <div className="w-14 h-14 hex-clip bg-[var(--color-gold)]/10 flex items-center justify-center text-2xl flex-shrink-0">
-                  ⚡
+                <div className="w-14 h-14 hex-clip bg-[var(--color-gold)]/10 flex items-center justify-center flex-shrink-0">
+                  <Zap className="w-6 h-6 text-[var(--color-gold)]" />
                 </div>
                 <div>
                   <p className="font-display font-700 text-[var(--color-green-darkest)] text-base mb-1">
@@ -174,7 +175,9 @@ export default function ContactPage() {
 
               {/* Free Consultation */}
               <div className="bg-gradient-to-br from-[var(--color-green-dark)] to-[var(--color-green-mid)] rounded-2xl p-6 text-center">
-                <div className="text-3xl mb-3">🎯</div>
+                <div className="flex justify-center mb-3">
+                  <Target className="w-8 h-8 text-[var(--color-gold)]" />
+                </div>
                 <h4 className="font-display font-700 text-[var(--color-beige)] text-lg mb-2">
                   Free Consultation
                 </h4>

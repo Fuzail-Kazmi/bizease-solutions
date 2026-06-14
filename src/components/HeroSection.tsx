@@ -168,6 +168,7 @@ export default function HeroSection() {
                   src="/besolutions-logo.svg"
                   alt="BE Solutions"
                   fill
+                  sizes="(max-width: 768px) 100vw, 192px"
                   className="object-contain"
                   priority
                 />

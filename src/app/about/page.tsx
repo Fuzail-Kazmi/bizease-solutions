@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Handshake, Lightbulb, Star, Link as LinkIcon, Zap, TrendingUp, Target, Telescope } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "About Us",
@@ -8,12 +9,12 @@ export const metadata: Metadata = {
 };
 
 const values = [
-  { id: "value-integrity",    icon: "🤝", title: "Integrity",    desc: "We operate with full transparency and honesty in every client relationship." },
-  { id: "value-innovation",   icon: "💡", title: "Innovation",   desc: "Constant evolution and adoption of cutting-edge approaches to solve complex challenges." },
-  { id: "value-excellence",   icon: "⭐", title: "Excellence",   desc: "We hold ourselves to the highest standards in every deliverable and interaction." },
-  { id: "value-partnership",  icon: "🔗", title: "Partnership",  desc: "We invest in your success as if it were our own — your goals become ours." },
-  { id: "value-agility",      icon: "⚡", title: "Agility",      desc: "We move fast without sacrificing quality, adapting to your evolving needs." },
-  { id: "value-impact",       icon: "📈", title: "Impact",       desc: "Every engagement is measured against real-world outcomes, not just outputs." },
+  { id: "value-integrity",    icon: <Handshake className="w-8 h-8" />, title: "Integrity",    desc: "We operate with full transparency and honesty in every client relationship." },
+  { id: "value-innovation",   icon: <Lightbulb className="w-8 h-8" />, title: "Innovation",   desc: "Constant evolution and adoption of cutting-edge approaches to solve complex challenges." },
+  { id: "value-excellence",   icon: <Star className="w-8 h-8" />, title: "Excellence",   desc: "We hold ourselves to the highest standards in every deliverable and interaction." },
+  { id: "value-partnership",  icon: <LinkIcon className="w-8 h-8" />, title: "Partnership",  desc: "We invest in your success as if it were our own — your goals become ours." },
+  { id: "value-agility",      icon: <Zap className="w-8 h-8" />, title: "Agility",      desc: "We move fast without sacrificing quality, adapting to your evolving needs." },
+  { id: "value-impact",       icon: <TrendingUp className="w-8 h-8" />, title: "Impact",       desc: "Every engagement is measured against real-world outcomes, not just outputs." },
 ];
 
 const timeline = [
@@ -68,7 +69,7 @@ export default function AboutPage() {
             >
               <div className="absolute top-4 right-4 w-20 h-20 hex-clip bg-[var(--color-gold)]/5 group-hover:bg-[var(--color-gold)]/10 transition-all duration-300" aria-hidden="true" />
               <div className="w-12 h-12 hex-clip bg-[var(--color-gold)]/20 flex items-center justify-center mb-6">
-                <span className="text-2xl">🎯</span>
+                <Target className="w-6 h-6 text-[var(--color-gold)]" />
               </div>
               <h2 id="mission-heading" className="font-display font-700 text-2xl text-[var(--color-gold)] mb-4">Our Mission</h2>
               <p className="font-body text-[var(--color-beige)]/70 leading-relaxed text-lg">
@@ -85,7 +86,7 @@ export default function AboutPage() {
             >
               <div className="absolute top-4 right-4 w-20 h-20 hex-clip bg-[var(--color-green-dark)]/5 group-hover:bg-[var(--color-gold)]/5 transition-all duration-300" aria-hidden="true" />
               <div className="w-12 h-12 hex-clip bg-[var(--color-green-dark)] flex items-center justify-center mb-6">
-                <span className="text-2xl">🔭</span>
+                <Telescope className="w-6 h-6 text-[var(--color-beige)]" />
               </div>
               <h2 className="font-display font-700 text-2xl text-[var(--color-green-darkest)] mb-4">Our Vision</h2>
               <p className="font-body text-[var(--color-green-darkest)]/60 leading-relaxed text-lg">
@@ -163,7 +164,7 @@ export default function AboutPage() {
                 id={v.id}
                 className="p-6 rounded-2xl bg-white border border-[var(--color-green-dark)]/10 hover:border-[var(--color-gold)]/30 hover:shadow-xl hover:shadow-[var(--color-green-dark)]/5 transition-all duration-300 hover:-translate-y-1 group text-center"
               >
-                <div className="text-3xl mb-3">{v.icon}</div>
+                <div className="mb-3 flex items-center justify-center text-[var(--color-green-darkest)] group-hover:text-[var(--color-gold)] transition-colors">{v.icon}</div>
                 <h3 className="font-display font-700 text-[var(--color-green-darkest)] group-hover:text-[var(--color-green-mid)] transition-colors mb-2">
                   {v.title}
                 </h3>
@@ -175,7 +176,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-[var(--color-green-dark)]" aria-label="About CTA">
+      <section className="section-padding bg-[var(--color-green-dark)]" aria-label="About CTA">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-display font-800 text-3xl sm:text-4xl text-[var(--color-beige)] mb-4">
             Let&apos;s Work Together

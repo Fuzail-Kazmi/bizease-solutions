@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@source "../";
 
 @theme {
   /* ── Brand Colors ── */
@@ -107,7 +108,6 @@ body {
 }
 
 /* ── Utility Classes ── */
-@layer utilities {
   .font-display {
     font-family: var(--font-display);
   }
@@ -255,7 +255,6 @@ body {
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
   }
-}
 
 /* ── Geometric Grid Background ── */
 .geo-bg {

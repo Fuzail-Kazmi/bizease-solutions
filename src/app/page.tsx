@@ -4,6 +4,7 @@ import ServicesGrid from "@/components/ServicesGrid";
 import StatsSection from "@/components/StatsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import Link from "next/link";
+import { Target, Link as LinkIcon, TrendingUp, Zap } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Bizease Solutions — All Business Needs Under One Roof",
@@ -14,25 +15,25 @@ export const metadata: Metadata = {
 const whyUs = [
   {
     id: "why-expert",
-    icon: "🎯",
+    icon: <Target className="w-8 h-8 text-[var(--color-green-dark)]" />,
     title: "Deep Expertise",
     desc: "Senior-level specialists across every domain — from tech to finance to marketing.",
   },
   {
     id: "why-unified",
-    icon: "🔗",
+    icon: <LinkIcon className="w-8 h-8 text-[var(--color-green-dark)]" />,
     title: "Unified Partnership",
     desc: "One team, one relationship, every service you need. No juggling multiple vendors.",
   },
   {
     id: "why-results",
-    icon: "📈",
+    icon: <TrendingUp className="w-8 h-8 text-[var(--color-green-dark)]" />,
     title: "Results-Driven",
     desc: "We measure success by your growth — tangible KPIs, not just deliverables.",
   },
   {
     id: "why-agile",
-    icon: "⚡",
+    icon: <Zap className="w-8 h-8 text-[var(--color-green-dark)]" />,
     title: "Agile Execution",
     desc: "Fast turnarounds with rigorous quality standards, powered by proven frameworks.",
   },
@@ -91,7 +92,7 @@ export default function HomePage() {
                   id={item.id}
                   className="p-6 rounded-2xl bg-white border border-[var(--color-green-dark)]/10 hover:border-[var(--color-gold)]/30 hover:shadow-xl hover:shadow-[var(--color-green-dark)]/5 transition-all duration-300 hover:-translate-y-1 group"
                 >
-                  <div className="text-3xl mb-3">{item.icon}</div>
+                  <div className="mb-3 flex items-center justify-center">{item.icon}</div>
                   <h3 className="font-display font-700 text-base text-[var(--color-green-darkest)] mb-1.5 group-hover:text-[var(--color-green-mid)] transition-colors">
                     {item.title}
                   </h3>
@@ -111,7 +112,7 @@ export default function HomePage() {
 
       {/* CTA Banner */}
       <section
-        className="relative py-24 bg-gradient-hero overflow-hidden"
+        className="section-padding relative bg-gradient-hero overflow-hidden"
         aria-labelledby="cta-heading"
       >
         <div className="absolute inset-0 geo-bg opacity-30" aria-hidden="true" />

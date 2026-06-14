@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { MonitorSmartphone, Search, BarChart3, Code2, Users, DollarSign } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Services",
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
 const services = [
   {
     id: "svc-it-consulting",
-    icon: "💻",
+    icon: <MonitorSmartphone className="w-6 h-6 text-white" />,
     title: "IT Consulting",
     tagline: "Technology that works for you",
     description:
@@ -20,7 +21,7 @@ const services = [
   },
   {
     id: "svc-digital-marketing",
-    icon: "📱",
+    icon: <Search className="w-6 h-6 text-white" />,
     title: "Digital Marketing",
     tagline: "Growth through data and creativity",
     description:
@@ -30,7 +31,7 @@ const services = [
   },
   {
     id: "svc-business-strategy",
-    icon: "📊",
+    icon: <BarChart3 className="w-6 h-6 text-white" />,
     title: "Business Strategy",
     tagline: "Direction, clarity, and execution",
     description:
@@ -40,7 +41,7 @@ const services = [
   },
   {
     id: "svc-software-dev",
-    icon: "⚙️",
+    icon: <Code2 className="w-6 h-6 text-white" />,
     title: "Software Development",
     tagline: "Custom solutions, built to scale",
     description:
@@ -50,7 +51,7 @@ const services = [
   },
   {
     id: "svc-hr-operations",
-    icon: "👥",
+    icon: <Users className="w-6 h-6 text-white" />,
     title: "HR & Operations",
     tagline: "People-first. Process-driven.",
     description:
@@ -60,7 +61,7 @@ const services = [
   },
   {
     id: "svc-financial",
-    icon: "💰",
+    icon: <DollarSign className="w-6 h-6 text-white" />,
     title: "Financial Advisory",
     tagline: "Financial clarity for confident decisions",
     description:
@@ -205,7 +206,7 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-[var(--color-cream)]" aria-label="Services CTA">
+      <section className="section-padding bg-[var(--color-cream)]" aria-label="Services CTA">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-display font-800 text-3xl sm:text-4xl text-[var(--color-green-darkest)] mb-4">
             Ready to Get Started?

@@ -47,9 +47,10 @@ export default function Footer() {
             <Link href="/" className="flex items-center gap-3 mb-5 group">
               <div className="relative w-12 h-12 transition-transform duration-300 group-hover:scale-110">
                 <Image
-                  src="/besolutions-logo.svg"
-                  alt="Bizease Solutions Logo"
+                  src="/besolutions-logo.png"
+                  alt="Bizease Solutions"
                   fill
+                  sizes="48px"
                   className="object-contain"
                 />
               </div>
