@@ -83,20 +83,20 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-32 pb-20 bg-gradient-hero overflow-hidden" aria-label="Contact hero">
+      <section className="relative pt-32! pb-20! bg-gradient-hero overflow-hidden" aria-label="Contact hero">
         <div className="absolute inset-0 geo-bg opacity-30" aria-hidden="true" />
-        <div className="absolute top-24 right-12 w-36 h-36 hex-clip bg-[var(--color-gold)]/8 animate-float" aria-hidden="true" />
-        <div className="absolute bottom-8 left-8 w-24 h-24 hex-clip bg-[var(--color-gold)]/5 animate-float" style={{ animationDelay: "1s" }} aria-hidden="true" />
+        <div className="absolute top-24 right-12 w-36 h-36 hex-clip bg-gold/8 animate-float" aria-hidden="true" />
+        <div className="absolute bottom-8 left-8 w-24 h-24 hex-clip bg-gold/5 animate-float" style={{ animationDelay: "1s" }} aria-hidden="true" />
 
-        <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <span className="inline-block font-display font-500 text-[var(--color-gold)] text-xs tracking-widest uppercase mb-4 px-4 py-1.5 rounded-full border border-[var(--color-gold)]/30 bg-[var(--color-gold)]/10">
+        <div className="relative z-10 max-w-3xl! mx-auto! px-4! sm:px-6! lg:px-8! text-center">
+          <span className="inline-block font-display font-500 text-gold text-xs tracking-widest uppercase mb-2! px-4! py-1.5! rounded-full border border-gold/30 bg-gold/10">
             Let&apos;s Talk
           </span>
-          <h1 className="font-display font-800 text-5xl sm:text-6xl text-[var(--color-beige)] mt-4 mb-6 leading-tight">
+          <h1 className="font-display font-800 text-5xl sm:text-6xl text-beige mt-4! mb-6! leading-tight">
             Get In{" "}
             <span className="text-gradient-gold">Touch</span>
           </h1>
-          <p className="font-body text-[var(--color-beige)]/65 text-xl leading-relaxed">
+          <p className="font-body text-beige/65 text-xl leading-relaxed">
             Have a project in mind? We&apos;d love to hear about it. Reach out and
             our team will get back to you within 24 hours.
           </p>
@@ -110,16 +110,16 @@ export default function ContactPage() {
       </section>
 
       {/* Main content */}
-      <section className="section-padding bg-[var(--color-cream)]" aria-labelledby="contact-form-heading">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="section-padding bg-cream" aria-labelledby="contact-form-heading">
+        <div className="max-w-7xl! mx-auto! px-4! sm:px-6! lg:px-8!">
           <div className="grid lg:grid-cols-5 gap-12">
             {/* Form — 3 cols */}
             <div className="lg:col-span-3">
-              <div className="bg-white rounded-2xl border border-[var(--color-green-dark)]/10 p-8 sm:p-10 shadow-sm">
-                <h2 id="contact-form-heading" className="font-display font-700 text-2xl text-[var(--color-green-darkest)] mb-2">
+              <div className="bg-white rounded-2xl border border-green-dark/10 p-8! sm:p-10! shadow-sm">
+                <h2 id="contact-form-heading" className="font-display font-700 text-2xl text-green-darkest mb-2">
                   Send Us a Message
                 </h2>
-                <p className="font-body text-[var(--color-green-darkest)]/55 text-sm mb-8">
+                <p className="font-body text-green-darkest/55 text-sm mb-8!">
                   Fill out the form below and we&apos;ll get back to you within 24 hours.
                 </p>
                 <ContactForm />
@@ -129,9 +129,9 @@ export default function ContactPage() {
             {/* Info — 2 cols */}
             <div className="lg:col-span-2 flex flex-col gap-6">
               {/* Contact Info Cards */}
-              <div className="bg-[var(--color-green-darkest)] rounded-2xl p-8 relative overflow-hidden">
-                <div className="absolute top-4 right-4 w-16 h-16 hex-clip bg-[var(--color-gold)]/8" aria-hidden="true" />
-                <h3 className="font-display font-700 text-[var(--color-beige)] text-lg mb-6">
+              <div className="bg-green-darkest rounded-2xl p-8! relative overflow-hidden">
+                <div className="absolute top-4 right-4 w-16 h-16 hex-clip bg-gold/8" aria-hidden="true" />
+                <h3 className="font-display font-700 text-beige text-lg mb-6!">
                   Contact Information
                 </h3>
                 <div className="flex flex-col gap-5">
@@ -142,14 +142,14 @@ export default function ContactPage() {
                       href={info.href}
                       className="flex items-start gap-4 group"
                     >
-                      <div className="w-10 h-10 hex-clip bg-[var(--color-green-mid)]/40 flex items-center justify-center text-[var(--color-gold)] flex-shrink-0 group-hover:bg-[var(--color-gold)]/20 transition-colors duration-200">
+                      <div className="w-10 h-10 hex-clip bg-green-mid/40 flex items-center justify-center text-gold shrink-0 group-hover:bg-gold/20 transition-colors duration-200">
                         {info.icon}
                       </div>
                       <div>
-                        <p className="font-display font-500 text-[var(--color-gold)] text-xs uppercase tracking-widest mb-0.5">
+                        <p className="font-display font-500 text-gold text-xs uppercase tracking-widest mb-0.5!">
                           {info.label}
                         </p>
-                        <p className="font-body text-[var(--color-beige)]/70 text-sm group-hover:text-[var(--color-beige)] transition-colors duration-200">
+                        <p className="font-body text-beige/70 text-sm group-hover:text-beige transition-colors duration-200">
                           {info.value}
                         </p>
                       </div>
@@ -159,35 +159,35 @@ export default function ContactPage() {
               </div>
 
               {/* Quick Response Badge */}
-              <div className="bg-white rounded-2xl border border-[var(--color-green-dark)]/10 p-6 flex items-center gap-4">
-                <div className="w-14 h-14 hex-clip bg-[var(--color-gold)]/10 flex items-center justify-center flex-shrink-0">
-                  <Zap className="w-6 h-6 text-[var(--color-gold)]" />
+              <div className="bg-white rounded-2xl border border-green-dark/10 p-6! flex items-center gap-4">
+                <div className="w-14 h-14 hex-clip bg-gold/10 flex items-center justify-center shrink-0">
+                  <Zap className="w-6 h-6 text-gold" />
                 </div>
                 <div>
-                  <p className="font-display font-700 text-[var(--color-green-darkest)] text-base mb-1">
+                  <p className="font-display font-700 text-green-darkest text-base mb-1!">
                     Fast Response Guarantee
                   </p>
-                  <p className="font-body text-sm text-[var(--color-green-darkest)]/55">
+                  <p className="font-body text-sm text-green-darkest/55">
                     We reply to every inquiry within 24 business hours.
                   </p>
                 </div>
               </div>
 
               {/* Free Consultation */}
-              <div className="bg-gradient-to-br from-[var(--color-green-dark)] to-[var(--color-green-mid)] rounded-2xl p-6 text-center">
-                <div className="flex justify-center mb-3">
-                  <Target className="w-8 h-8 text-[var(--color-gold)]" />
+              <div className="bg-linear-to-br from-green-dark to-green-mid rounded-2xl p-6! text-center!">
+                <div className="flex justify-center mb-3!">
+                  <Target className="w-8 h-8 text-gold" />
                 </div>
-                <h4 className="font-display font-700 text-[var(--color-beige)] text-lg mb-2">
+                <h4 className="font-display font-700 text-beige text-lg mb-2!">
                   Free Consultation
                 </h4>
-                <p className="font-body text-[var(--color-beige)]/65 text-sm mb-4">
+                <p className="font-body text-beige/65 text-sm mb-4!">
                   Book a complimentary 30-minute strategy call with one of our experts.
                 </p>
                 <a
                   id="contact-book-call"
                   href="mailto:info@bizease.solutions?subject=Book a Consultation"
-                  className="inline-block px-6 py-2.5 font-display font-600 text-sm bg-[var(--color-gold)] text-[var(--color-green-darkest)] rounded-xl hover:bg-[var(--color-gold-light)] transition-all duration-200"
+                  className="inline-block px-6! py-2.5! font-display font-600 text-sm bg-gold text-green-darkest rounded-xl hover:bg-gold-light transition-all duration-200"
                 >
                   Book a Call
                 </a>
@@ -200,12 +200,12 @@ export default function ContactPage() {
       {/* FAQs */}
       <section className="section-padding bg-gradient-section relative overflow-hidden" aria-labelledby="faq-heading">
         <div className="absolute inset-0 geo-bg opacity-20" aria-hidden="true" />
-        <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <span className="inline-block font-display font-500 text-[var(--color-gold)] text-xs tracking-widest uppercase mb-3 px-4 py-1.5 rounded-full border border-[var(--color-gold)]/20">
+        <div className="relative z-10 max-w-3xl! mx-auto! px-4! sm:px-6! lg:px-8!">
+          <div className="text-center mb-12!">
+            <span className="inline-block font-display font-500 text-gold text-xs tracking-widest uppercase mb-3! px-4! py-1.5! rounded-full border border-gold/20">
               FAQ
             </span>
-            <h2 id="faq-heading" className="font-display font-800 text-3xl sm:text-4xl text-[var(--color-beige)] mt-4">
+            <h2 id="faq-heading" className="font-display font-800 text-3xl sm:text-4xl text-beige mt-4!">
               Frequently Asked Questions
             </h2>
           </div>
@@ -214,13 +214,13 @@ export default function ContactPage() {
               <div
                 key={faq.id}
                 id={faq.id}
-                className="glass-card rounded-xl p-6"
+                className="glass-card rounded-xl p-6!"
               >
-                <h3 className="font-display font-600 text-[var(--color-beige)] text-base mb-2 flex items-start gap-3">
-                  <span className="text-[var(--color-gold)] flex-shrink-0">Q.</span>
+                <h3 className="font-display font-600 text-beige text-base mb-2! flex items-start gap-3">
+                  <span className="text-gold shrink-0">Q.</span>
                   {faq.q}
                 </h3>
-                <p className="font-body text-[var(--color-beige)]/60 text-sm leading-relaxed pl-6">
+                <p className="font-body text-beige/60 text-sm leading-relaxed pl-6!">
                   {faq.a}
                 </p>
               </div>

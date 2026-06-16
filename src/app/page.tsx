@@ -15,25 +15,25 @@ export const metadata: Metadata = {
 const whyUs = [
   {
     id: "why-expert",
-    icon: <Target className="w-8 h-8 text-[var(--color-green-dark)]" />,
+    icon: <Target className="w-8 h-8 text-green-dark" />,
     title: "Deep Expertise",
     desc: "Senior-level specialists across every domain from tech to finance to marketing.",
   },
   {
     id: "why-unified",
-    icon: <LinkIcon className="w-8 h-8 text-[var(--color-green-dark)]" />,
+    icon: <LinkIcon className="w-8 h-8 text-green-dark" />,
     title: "Unified Partnership",
     desc: "One team, one relationship, every service you need. No juggling multiple vendors.",
   },
   {
     id: "why-results",
-    icon: <TrendingUp className="w-8 h-8 text-[var(--color-green-dark)]" />,
+    icon: <TrendingUp className="w-8 h-8 text-green-dark" />,
     title: "Results-Driven",
     desc: "We measure success by your growth tangible KPIs, not just deliverables.",
   },
   {
     id: "why-agile",
-    icon: <Zap className="w-8 h-8 text-[var(--color-green-dark)]" />,
+    icon: <Zap className="w-8 h-8 text-green-dark" />,
     title: "Agile Execution",
     desc: "Fast turnarounds with rigorous quality standards, powered by proven frameworks.",
   },
@@ -45,22 +45,22 @@ export default function HomePage() {
       <HeroSection />
 
       {/* Why Choose Us */}
-      <section className="section-padding bg-[var(--color-cream)]" aria-labelledby="why-us-heading">
+      <section className="section-padding bg-cream" aria-labelledby="why-us-heading">
         <div className="max-w-7xl! mx-auto! p-4! sm:p-6! lg:p-8!">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Left text */}
             <div>
-              <span className="inline-block font-display font-500 text-[var(--color-gold)] text-xs tracking-widest uppercase rounded-full border border-[var(--color-gold)]/30 bg-[var(--color-gold)]/5">
+              <span className="inline-block font-display font-500 text-gold text-xs tracking-widest uppercase mb-2! px-4! py-1.5! rounded-full border border-gold/30 bg-gold/10">
                 Why Choose Us
               </span>
               <h2
                 id="why-us-heading"
-                className="font-display font-800 text-4xl sm:text-5xl text-[var(--color-green-darkest)] mb-6 leading-tight"
+                className="font-display font-800 text-4xl sm:text-5xl text-green-darkest mb-4! leading-tight"
               >
                 Your Growth Is Our
-                <span className="block text-[var(--color-green-mid)]">Mission</span>
+                <span className="block text-green-mid">Mission</span>
               </h2>
-              <p className="font-body text-[var(--color-green-darkest)]/60 text-lg leading-relaxed mb-8">
+              <p className="font-body text-green-darkest/60 text-lg leading-relaxed mb-8!">
                 We don&apos;t just deliver services. we build long-term partnerships.
                 Bizease Solutions brings enterprise-grade expertise to businesses of all
                 sizes, helping you scale smarter and faster.
@@ -68,7 +68,7 @@ export default function HomePage() {
               <Link
                 href="/about"
                 id="home-about-link"
-                className="inline-flex items-center gap-2 font-display font-600 text-[var(--color-green-mid)] hover:text-[var(--color-gold)] transition-colors duration-300 group"
+                className="inline-flex items-center gap-2 font-display font-600 text-green-mid hover:text-gold transition-colors duration-300 group"
               >
                 Learn More About Us
                 <div
@@ -86,13 +86,13 @@ export default function HomePage() {
                 <div
                   key={item.id}
                   id={item.id}
-                  className="p-2! rounded-2xl bg-white border border-[var(--color-green-dark)]/10 hover:border-[var(--color-gold)]/30 hover:shadow-xl hover:shadow-[var(--color-green-dark)]/5 transition-all duration-300 hover:-translate-y-1 group"
+                  className="p-2! rounded-2xl bg-white border border-green-dark/10 hover:border-gold/30 hover:shadow-xl hover:shadow-green-dark/5 transition-all duration-300 hover:-translate-y-1 group"
                 >
-                  <div className="mb-3 flex items-center justify-center">{item.icon}</div>
-                  <h3 className="font-display font-700 text-base text-[var(--color-green-darkest)] mb-1.5 group-hover:text-[var(--color-green-mid)] transition-colors">
+                  <div className="mb-3! flex items-center justify-center">{item.icon}</div>
+                  <h3 className="font-display font-700 text-base text-green-darkest mb-1.5 group-hover:text-green-mid transition-colors">
                     {item.title}
                   </h3>
-                  <p className="font-body text-xs lg:text-sm text-[var(--color-green-darkest)]/55 leading-relaxed">
+                  <p className="font-body text-xs lg:text-sm text-green-darkest/55 leading-relaxed">
                     {item.desc}
                   </p>
                 </div>
@@ -104,7 +104,7 @@ export default function HomePage() {
 
       <StatsSection />
       <ServicesGrid />
-      <TestimonialsSection />
+      {/* <TestimonialsSection /> */}
 
       {/* CTA Banner */}
       <section
@@ -113,25 +113,25 @@ export default function HomePage() {
       >
         <div className="absolute inset-0 geo-bg opacity-30" aria-hidden="true" />
         <div
-          className="absolute top-0 left-1/4 w-64 h-64 hex-clip bg-[var(--color-gold)]/5"
+          className="absolute top-0 left-1/4 w-64 h-64 hex-clip bg-gold/5"
           aria-hidden="true"
         />
         <div
-          className="absolute bottom-0 right-1/4 w-48 h-48 hex-clip bg-[var(--color-gold)]/5"
+          className="absolute bottom-0 right-1/4 w-48 h-48 hex-clip bg-gold/5"
           aria-hidden="true"
         />
 
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="relative z-10 space-y-6! max-w-4xl! mx-auto! px-4! sm:px-6! lg:px-8! text-center!">
           <h2
             id="cta-heading"
-            className="font-display font-800 text-4xl sm:text-5xl lg:text-6xl text-[var(--color-beige)] mb-6 leading-tight"
+            className="font-display font-800 text-4xl sm:text-5xl lg:text-6xl text-beige mb-6! leading-tight"
           >
             Ready to{" "}
             <span className="text-gradient-gold">Transform</span>
             <br />
             Your Business?
           </h2>
-          <p className="font-body text-[var(--color-beige)]/60 text-xl mb-10 max-w-2xl mx-auto">
+          <p className="font-body text-beige/60 text-xl mb-10! max-w-2xl! mx-auto!">
             Let&apos;s build something exceptional together. Our team is ready to
             understand your goals and craft a solution that works.
           </p>
@@ -139,14 +139,14 @@ export default function HomePage() {
             <Link
               href="/contact"
               id="home-final-cta"
-              className="px-10 py-4 font-display font-700 text-base bg-[var(--color-gold)] text-[var(--color-green-darkest)] rounded-xl hover:bg-[var(--color-gold-light)] transition-all duration-300 hover:shadow-2xl hover:shadow-[var(--color-gold)]/30 hover:-translate-y-1 animate-pulse-gold"
+              className="px-10! py-4! font-display font-700 text-base bg-gold text-green-darkest rounded-xl hover:bg-gold-light transition-all duration-300 hover:shadow-2xl hover:shadow-gold/30 hover:-translate-y-1 animate-pulse-gold"
             >
               Start Your Journey
             </Link>
             <Link
               href="/services"
               id="home-view-services"
-              className="px-10 py-4 font-display font-600 text-base border border-[var(--color-beige)]/20 text-[var(--color-beige)] rounded-xl hover:border-[var(--color-gold)]/40 hover:bg-white/5 transition-all duration-300 hover:-translate-y-1"
+              className="px-10! py-4! font-display font-600 text-base border border-beige/20 text-beige rounded-xl hover:border-gold/40 hover:bg-white/5 transition-all duration-300 hover:-translate-y-1"
             >
               View Services
             </Link>

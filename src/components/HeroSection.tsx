@@ -33,7 +33,7 @@ export default function HeroSection() {
       {floatingHexagons.map((hex, i) => (
         <div
           key={i}
-          className="absolute hex-clip bg-[var(--color-gold)] animate-float pointer-events-none"
+          className="absolute hex-clip bg-gold animate-float pointer-events-none"
           style={{
             width: hex.size,
             height: hex.size,
@@ -58,25 +58,25 @@ export default function HeroSection() {
       />
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-20">
+      <div className="relative z-10 max-w-7xl! mx-auto! px-4! sm:px-6! lg:px-8! pt-28! pb-20!">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left — Text */}
           <div className="flex flex-col gap-6 text-center lg:text-left">
             {/* Badge */}
             <div
-              className={`inline-flex self-center lg:self-start items-center gap-2 px-4 py-1.5 rounded-full border border-[var(--color-gold)]/30 bg-[var(--color-gold)]/10 transition-all duration-700 ${
+              className={`inline-flex self-center lg:self-start items-center gap-2 px-4! py-1.5! rounded-full border border-gold/30 bg-gold/10 transition-all duration-700 ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
               }`}
             >
-              <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-gold)] animate-pulse" />
-              <span className="font-display font-500 text-[var(--color-gold)] text-xs tracking-widest uppercase">
+              <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse" />
+              <span className="font-display font-500 text-gold text-xs tracking-widest uppercase">
                 BE Solutions
               </span>
             </div>
 
             {/* Headline */}
             <h1
-              className={`font-display font-800 text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[1.1] text-[var(--color-beige)] transition-all duration-700 delay-100 ${
+              className={`font-display font-800 text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[1.1] text-green-mid transition-all duration-700 delay-100 ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
             >
@@ -90,32 +90,32 @@ export default function HeroSection() {
 
             {/* Subtext */}
             <p
-              className={`font-body text-[var(--color-beige)]/70 text-lg sm:text-xl max-w-xl mx-auto lg:mx-0 leading-relaxed transition-all duration-700 delay-200 ${
+              className={`font-body text-black/60 text-lg sm:text-xl max-w-xl mx-auto lg:mx-0 leading-relaxed transition-all duration-700 delay-200 ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
             >
               Bizease Solutions empowers businesses with cutting-edge IT, strategic
-              consulting, digital marketing, and operational excellence — all in one
+              consulting, digital marketing, and operational excellence all in one
               expert partnership.
             </p>
 
             {/* CTAs */}
             <div
-              className={`flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mt-2 transition-all duration-700 delay-300 ${
+              className={`flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mt-2! transition-all duration-700 delay-300 ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
             >
               <Link
                 href="/services"
                 id="hero-explore-cta"
-                className="px-8 py-4 font-display font-600 text-base bg-[var(--color-gold)] text-[var(--color-green-darkest)] rounded-xl hover:bg-[var(--color-gold-light)] transition-all duration-300 hover:shadow-2xl hover:shadow-[var(--color-gold)]/30 hover:-translate-y-1 text-center animate-pulse-gold"
+                className="px-4! py-2! font-display font-600 text-base bg-gold text-black/60 rounded-xl hover:bg-gold-light hover:text-cream transition-all duration-300 hover:shadow-2xl hover:shadow-gold/30 hover:-translate-y-1 text-center animate-pulse-gold"
               >
                 Explore Services
               </Link>
               <Link
                 href="/contact"
                 id="hero-contact-cta"
-                className="px-8 py-4 font-display font-600 text-base border border-[var(--color-beige)]/20 text-[var(--color-beige)] rounded-xl hover:border-[var(--color-gold)]/50 hover:bg-white/5 transition-all duration-300 hover:-translate-y-1 text-center"
+                className="px-4! py-2! font-display font-600 text-base border border-gold/60 text-gold rounded-xl hover:border-green-dark/40 hover:bg-white/5 hover:text-green-dark/40 transition-all duration-300 hover:-translate-y-1 text-center"
               >
                 Get In Touch
               </Link>
@@ -123,7 +123,7 @@ export default function HeroSection() {
 
             {/* Stats Row */}
             <div
-              className={`flex flex-wrap gap-8 justify-center lg:justify-start mt-6 transition-all duration-700 delay-400 ${
+              className={`flex flex-wrap gap-8 justify-center lg:justify-start mt-6! transition-all duration-700 delay-400 ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
             >
@@ -136,7 +136,7 @@ export default function HeroSection() {
                   <span className="font-display font-800 text-3xl text-gradient-gold">
                     {stat.value}
                   </span>
-                  <span className="font-body text-xs text-[var(--color-beige)]/50 uppercase tracking-widest mt-0.5">
+                  <span className="font-body text-xs text-gold/60 uppercase tracking-widest mt-0.5!">
                     {stat.label}
                   </span>
                 </div>
@@ -152,20 +152,20 @@ export default function HeroSection() {
           >
             {/* Rotating ring */}
             <div
-              className="absolute w-96 h-96 rounded-full border border-dashed border-[var(--color-gold)]/20 animate-spin-slow"
+              className="absolute w-96 h-96 rounded-full border border-dashed border-gold/20 animate-spin-slow"
               aria-hidden="true"
             />
             <div
-              className="absolute w-80 h-80 rounded-full border border-[var(--color-green-light)]/20 animate-spin-slow"
+              className="absolute w-80 h-80 rounded-full border border-green-light/20 animate-spin-slow"
               style={{ animationDirection: "reverse", animationDuration: "20s" }}
               aria-hidden="true"
             />
 
             {/* Center Logo Hex */}
-            <div className="relative w-64 h-64 hex-clip bg-[var(--color-green-mid)]/30 border border-[var(--color-gold)]/20 flex items-center justify-center animate-float">
+            <div className="relative w-64 h-64 hex-clip bg-green-mid/30 border border-gold/20 flex items-center justify-center animate-float">
               <div className="relative w-48 h-48">
                 <Image
-                  src="/besolutions-logo.svg"
+                  src="/besolutions-logo.png"
                   alt="BE Solutions"
                   fill
                   sizes="(max-width: 768px) 100vw, 192px"
@@ -184,7 +184,7 @@ export default function HeroSection() {
             ].map((badge) => (
               <div
                 key={badge.label}
-                className="absolute glass-card px-3 py-1.5 rounded-full border border-[var(--color-gold)]/20 animate-float"
+                className="absolute glass-card px-2! py-1! rounded-full border border-gold/20 animate-float"
                 style={{
                   top: badge.top,
                   left: "left" in badge ? badge.left : undefined,
@@ -194,7 +194,7 @@ export default function HeroSection() {
                 }}
                 aria-hidden="true"
               >
-                <span className="font-display font-500 text-xs text-[var(--color-gold)]">
+                <span className="font-display font-500 text-xs text-gold">
                   {badge.label}
                 </span>
               </div>

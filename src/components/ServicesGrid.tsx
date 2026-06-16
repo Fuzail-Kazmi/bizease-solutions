@@ -91,25 +91,25 @@ export default function ServicesGrid() {
   }, []);
 
   return (
-    <section className="section-padding bg-[var(--color-cream)]" aria-labelledby="services-heading">
+    <section className="section-padding bg-cream" aria-labelledby="services-heading">
       <div className="max-w-7xl! mx-auto! p-4! sm:p-6! lg:p-8!">
         {/* Header */}
-        <div className="flex justify-center items-center flex-col text-center space-y-4 gap-4 mb-16!">
-          <span className="inline-block font-display font-500 text-[var(--color-gold)] text-xs tracking-widest uppercase mb-3 px-4 py-1.5 rounded-full border border-[var(--color-gold)]/30 bg-[var(--color-gold)]/5">
+        <div className="flex justify-center items-center flex-col text-center space-y-2! gap-4 mb-14!">
+        <span className="inline-block font-display font-500 text-gold text-xs tracking-widest uppercase mb-3! px-4! py-1.5! rounded-full border border-gold/30 bg-gold/5">
             What We Offer
           </span>
           <h2
             id="services-heading"
-            className="font-display font-800 text-4xl sm:text-5xl text-[var(--color-green-darkest)] mt-4"
+            className="font-display font-800 text-4xl sm:text-5xl text-green-darkest mt-2!"
           >
             Our Core{" "}
             <span className="relative">
-              <span className="text-[var(--color-green-mid)]">Services</span>
-              <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-[var(--color-gold)] to-transparent rounded-full" />
+              <span className="text-green-mid">Services</span>
+              <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-linear-to-r from-gold to-transparent rounded-full" />
             </span>
           </h2>
-          <p className="font-body text-[var(--color-green-darkest)]/60 text-lg mt-4 max-w-2xl mx-auto">
-            Everything your business needs — delivered by a single, unified team of experts.
+          <p className="font-body text-green-darkest/60 text-lg mt-4! max-w-2xl! mx-auto!">
+            Everything your business needs delivered by a single, unified team of experts.
           </p>
         </div>
 
@@ -120,7 +120,7 @@ export default function ServicesGrid() {
               key={service.id}
               id={service.id}
               ref={(el) => { cardRefs.current[i] = el; }}
-              className={`group relative px-4! py-3! space-y-2! rounded-2xl border border-[var(--color-green-dark)]/10 bg-white hover:border-[var(--color-gold)]/30 hover:shadow-2xl hover:shadow-[var(--color-green-dark)]/10 cursor-default transition-all duration-500 hover:-translate-y-2 ${
+              className={`group relative px-4! py-3! space-y-2! rounded-2xl border border-green-dark/10 bg-white hover:border-gold/30 hover:shadow-2xl hover:shadow-green-dark cursor-default transition-all duration-500 hover:-translate-y-2 ${
                 visibleCards.has(i)
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-8"
@@ -128,21 +128,21 @@ export default function ServicesGrid() {
               style={{ transitionDelay: `${i * 80}ms` }}
             >
               {/* Hex icon bg */}
-              <div className="relative mb-5">
-                <div className="w-14 h-14 hex-clip bg-[var(--color-green-dark)] flex items-center justify-center text-[var(--color-gold)] transition-all duration-300 group-hover:bg-[var(--color-gold)] group-hover:text-[var(--color-green-darkest)]">
+              <div className="relative mb-5!">
+                <div className="w-14 h-14 hex-clip bg-green-dark flex items-center justify-center text-gold transition-all duration-300 group-hover:bg-gold group-hover:text-green-darkest">
                   {service.icon}
                 </div>
               </div>
 
-              <h3 className="font-display font-700 text-lg text-[var(--color-green-darkest)] mb-2 group-hover:text-[var(--color-green-mid)] transition-colors duration-300">
+              <h3 className="font-display font-700 text-lg text-green-darkest mb-2! group-hover:text-green-mid transition-colors duration-300">
                 {service.title}
               </h3>
-              <p className="font-body text-sm text-[var(--color-green-darkest)]/60 leading-relaxed">
+              <p className="font-body text-sm text-green-darkest/60 leading-relaxed">
                 {service.description}
               </p>
 
               {/* Arrow */}
-              <div className="mt-5 flex items-center gap-2 text-[var(--color-gold)] opacity-0 group-hover:opacity-100 transition-all duration-300 translate-x-0 group-hover:translate-x-1">
+              <div className="mt-5! flex items-center gap-2 text-gold opacity-0 group-hover:opacity-100 transition-all duration-300 translate-x-0 group-hover:translate-x-1">
                 <span className="font-display font-500 text-sm">Learn More</span>
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
@@ -151,7 +151,7 @@ export default function ServicesGrid() {
 
               {/* Corner hex decoration */}
               <div
-                className="absolute top-4 right-4 w-8 h-8 hex-clip bg-[var(--color-gold)]/5 group-hover:bg-[var(--color-gold)]/15 transition-all duration-300"
+                className="absolute top-4 right-4 w-8 h-8 hex-clip bg-gold/5 group-hover:bg-gold/15 transition-all duration-300"
                 aria-hidden="true"
               />
             </div>

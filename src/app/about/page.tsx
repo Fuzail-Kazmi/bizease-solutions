@@ -5,14 +5,14 @@ import { Handshake, Lightbulb, Star, Link as LinkIcon, Zap, TrendingUp, Target, 
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Learn about Bizease Solutions — our story, mission, values, and the team behind Pakistan's most comprehensive B2B business solutions provider.",
+    "Learn about Bizease Solutions our story, mission, values, and the team behind Pakistan's most comprehensive B2B business solutions provider.",
 };
 
 const values = [
   { id: "value-integrity",    icon: <Handshake className="w-8 h-8" />, title: "Integrity",    desc: "We operate with full transparency and honesty in every client relationship." },
   { id: "value-innovation",   icon: <Lightbulb className="w-8 h-8" />, title: "Innovation",   desc: "Constant evolution and adoption of cutting-edge approaches to solve complex challenges." },
   { id: "value-excellence",   icon: <Star className="w-8 h-8" />, title: "Excellence",   desc: "We hold ourselves to the highest standards in every deliverable and interaction." },
-  { id: "value-partnership",  icon: <LinkIcon className="w-8 h-8" />, title: "Partnership",  desc: "We invest in your success as if it were our own — your goals become ours." },
+  { id: "value-partnership",  icon: <LinkIcon className="w-8 h-8" />, title: "Partnership",  desc: "We invest in your success as if it were our own your goals become ours." },
   { id: "value-agility",      icon: <Zap className="w-8 h-8" />, title: "Agility",      desc: "We move fast without sacrificing quality, adapting to your evolving needs." },
   { id: "value-impact",       icon: <TrendingUp className="w-8 h-8" />, title: "Impact",       desc: "Every engagement is measured against real-world outcomes, not just outputs." },
 ];
@@ -30,23 +30,23 @@ export default function AboutPage() {
   return (
     <>
       {/* Page Hero */}
-      <section className="relative pt-32 pb-20 bg-gradient-hero overflow-hidden" aria-label="About hero">
+      <section className="relative pt-32! pb-20! bg-gradient-hero overflow-hidden!" aria-label="About hero">
         <div className="absolute inset-0 geo-bg opacity-30" aria-hidden="true" />
-        <div className="absolute top-20 right-16 w-40 h-40 hex-clip bg-[var(--color-gold)]/8 animate-float" aria-hidden="true" />
-        <div className="absolute bottom-10 left-10 w-24 h-24 hex-clip bg-[var(--color-gold)]/6 animate-float" style={{ animationDelay: "1.5s" }} aria-hidden="true" />
+        <div className="absolute top-20 right-16 w-40 h-40 hex-clip bg-gold/8 animate-float" aria-hidden="true" />
+        <div className="absolute bottom-10 left-10 w-24 h-24 hex-clip bg-gold/6 animate-float" style={{ animationDelay: "1.5s" }} aria-hidden="true" />
 
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <span className="inline-block font-display font-500 text-[var(--color-gold)] text-xs tracking-widest uppercase mb-4 px-4 py-1.5 rounded-full border border-[var(--color-gold)]/30 bg-[var(--color-gold)]/10">
+        <div className="relative z-10 max-w-4xl! mx-auto! px-4! sm:px-6! lg:px-8! text-center!">
+          <span className="inline-block font-display font-500 text-gold text-xs tracking-widest uppercase mb-2! px-4! py-1.5! rounded-full border border-gold/30 bg-gold/10">
             About Bizease Solutions
           </span>
-          <h1 className="font-display font-800 text-5xl sm:text-6xl text-[var(--color-beige)] mt-4 mb-6 leading-tight">
+          <h1 className="font-display font-800 text-5xl sm:text-6xl text-beige mt-2! mb-6! leading-tight">
             Built to Simplify
             <br />
             <span className="text-gradient-gold">Business Complexity</span>
           </h1>
-          <p className="font-body text-[var(--color-beige)]/65 text-xl leading-relaxed max-w-3xl mx-auto">
+          <p className="font-body text-beige/65 text-xl leading-relaxed max-w-3xl! mx-auto!">
             Bizease Solutions was born from a simple belief: businesses shouldn&apos;t have to
-            juggle dozens of vendors for core functions. We bring it all together — under
+            juggle dozens of vendors for core functions. We bring it all together under
             one roof, with one dedicated team.
           </p>
         </div>
@@ -59,22 +59,22 @@ export default function AboutPage() {
       </section>
 
       {/* Mission & Vision */}
-      <section className="section-padding bg-[var(--color-cream)]" aria-labelledby="mission-heading">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="section-padding bg-cream" aria-labelledby="mission-heading">
+        <div className="max-w-7xl! mx-auto! px-4! sm:px-6! lg:px-8!">
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Mission */}
             <div
               id="about-mission"
-              className="p-8 sm:p-10 rounded-2xl bg-[var(--color-green-darkest)] border border-[var(--color-gold)]/10 relative overflow-hidden group"
+              className="p-8! sm:p-10! rounded-2xl bg-green-darkest border border-gold/10 relative overflow-hidden group"
             >
-              <div className="absolute top-4 right-4 w-20 h-20 hex-clip bg-[var(--color-gold)]/5 group-hover:bg-[var(--color-gold)]/10 transition-all duration-300" aria-hidden="true" />
-              <div className="w-12 h-12 hex-clip bg-[var(--color-gold)]/20 flex items-center justify-center mb-6">
-                <Target className="w-6 h-6 text-[var(--color-gold)]" />
+              <div className="absolute top-4 right-4 w-20 h-20 hex-clip bg-gold/5 group-hover:bg-gold/10 transition-all duration-300" aria-hidden="true" />
+              <div className="w-12 h-12 hex-clip bg-cream/20 flex items-center justify-center mb-6!">
+                <Target className="w-6 h-6 text-gold" />
               </div>
-              <h2 id="mission-heading" className="font-display font-700 text-2xl text-[var(--color-gold)] mb-4">Our Mission</h2>
-              <p className="font-body text-[var(--color-beige)]/70 leading-relaxed text-lg">
+              <h2 id="mission-heading" className="font-display font-700 text-2xl text-gold mb-4!">Our Mission</h2>
+              <p className="font-body text-beige/70 leading-relaxed text-lg">
                 To empower businesses of every size with comprehensive, high-impact solutions
-                that drive sustainable growth — delivered through a single, trusted partnership
+                that drive sustainable growth delivered through a single, trusted partnership
                 that spans technology, strategy, marketing, and operations.
               </p>
             </div>
@@ -82,15 +82,15 @@ export default function AboutPage() {
             {/* Vision */}
             <div
               id="about-vision"
-              className="p-8 sm:p-10 rounded-2xl bg-white border border-[var(--color-green-dark)]/10 relative overflow-hidden group hover:border-[var(--color-gold)]/20 transition-all duration-300"
+              className="p-8! sm:p-10! rounded-2xl bg-white border border-gold/10 relative overflow-hidden group hover:border-gold/20 transition-all duration-300"
             >
-              <div className="absolute top-4 right-4 w-20 h-20 hex-clip bg-[var(--color-green-dark)]/5 group-hover:bg-[var(--color-gold)]/5 transition-all duration-300" aria-hidden="true" />
-              <div className="w-12 h-12 hex-clip bg-[var(--color-green-dark)] flex items-center justify-center mb-6">
-                <Telescope className="w-6 h-6 text-[var(--color-beige)]" />
+              <div className="absolute top-4 right-4 w-20 h-20 hex-clip bg-gold/5 group-hover:bg-gold/10 transition-all duration-300" aria-hidden="true" />
+              <div className="w-12 h-12 hex-clip bg-gold/75 flex items-center justify-center mb-6!">
+                <Telescope className="w-6 h-6 text-green-darkest" />
               </div>
-              <h2 className="font-display font-700 text-2xl text-[var(--color-green-darkest)] mb-4">Our Vision</h2>
-              <p className="font-body text-[var(--color-green-darkest)]/60 leading-relaxed text-lg">
-                To become the region&apos;s most trusted unified business solutions platform —
+              <h2 className="font-display font-700 text-2xl text-green-darkest mb-4!">Our Vision</h2>
+              <p className="font-body text-green-darkest/60 leading-relaxed text-lg">
+                To become the region&apos;s most trusted unified business solutions platform
                 where every organization, from startup to enterprise, can access world-class
                 expertise without complexity or compromise.
               </p>
@@ -102,19 +102,19 @@ export default function AboutPage() {
       {/* Company Story Timeline */}
       <section className="section-padding bg-gradient-section relative overflow-hidden" aria-labelledby="story-heading">
         <div className="absolute inset-0 geo-bg opacity-20" aria-hidden="true" />
-        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <span className="inline-block font-display font-500 text-[var(--color-gold)] text-xs tracking-widest uppercase mb-3 px-4 py-1.5 rounded-full border border-[var(--color-gold)]/20">
+        <div className="relative z-10 max-w-5xl! mx-auto! px-4! sm:px-6! lg:px-8!">
+          <div className="text-center! mb-14!">
+            <span className="inline-block font-display font-500 text-gold text-xs tracking-widest uppercase mb-2! px-4! py-1.5! border rounded-full  border-gold/20">
               Our Journey
             </span>
-            <h2 id="story-heading" className="font-display font-800 text-4xl sm:text-5xl text-[var(--color-beige)] mt-4">
+            <h2 id="story-heading" className="font-display font-800 text-4xl sm:text-5xl text-beige mt-2!">
               A Decade of Growth
             </h2>
           </div>
 
           <div className="relative">
             {/* Vertical line */}
-            <div className="absolute left-6 sm:left-1/2 sm:-translate-x-px top-0 bottom-0 w-px bg-gradient-to-b from-[var(--color-gold)]/50 via-[var(--color-gold)]/20 to-transparent" aria-hidden="true" />
+            <div className="absolute left-6 sm:left-1/2 sm:-translate-x-px top-0 bottom-0 w-px bg-linear-to-b from-gold/50 via-gold/20 to-transparent" aria-hidden="true" />
 
             <div className="flex flex-col gap-10">
               {timeline.map((item, i) => (
@@ -127,15 +127,15 @@ export default function AboutPage() {
                 >
                   {/* Content */}
                   <div className={`flex-1 pl-14 sm:pl-0 ${i % 2 === 0 ? "sm:pr-12 sm:text-right" : "sm:pl-12"}`}>
-                    <div className="glass-card rounded-xl p-6 inline-block w-full">
-                      <span className="font-display font-800 text-[var(--color-gold)] text-2xl">{item.year}</span>
-                      <h3 className="font-display font-700 text-[var(--color-beige)] text-lg mt-1 mb-2">{item.title}</h3>
-                      <p className="font-body text-[var(--color-beige)]/55 text-sm leading-relaxed">{item.desc}</p>
+                    <div className="glass-card rounded-xl p-6! inline-block w-full">
+                      <span className="font-display font-800 text-gold text-2xl">{item.year}</span>
+                      <h3 className="font-display font-700 text-beige text-lg mt-1! mb-2!">{item.title}</h3>
+                      <p className="font-body text-beige/55 text-sm leading-relaxed">{item.desc}</p>
                     </div>
                   </div>
 
                   {/* Dot */}
-                  <div className="absolute left-4 sm:left-1/2 sm:-translate-x-1/2 top-6 w-5 h-5 rounded-full bg-[var(--color-gold)] border-4 border-[var(--color-green-darkest)] flex-shrink-0" aria-hidden="true" />
+                  <div className="absolute left-4 sm:left-1/2 sm:-translate-x-1/2 top-6 w-5 h-5 rounded-full bg-gold border-4 border-green-darkest shrink-0" aria-hidden="true" />
 
                   {/* Empty side */}
                   <div className="hidden sm:block flex-1" />
@@ -147,13 +147,13 @@ export default function AboutPage() {
       </section>
 
       {/* Values */}
-      <section className="section-padding bg-[var(--color-cream)]" aria-labelledby="values-heading">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <span className="inline-block font-display font-500 text-[var(--color-gold)] text-xs tracking-widest uppercase mb-3 px-4 py-1.5 rounded-full border border-[var(--color-gold)]/30 bg-[var(--color-gold)]/5">
+      <section className="section-padding bg-cream" aria-labelledby="values-heading">
+        <div className="max-w-7xl! mx-auto! px-4! sm:px-6! lg:px-8!">
+          <div className="text-center mb-14!">
+            <span className="inline-block font-display font-500 text-gold text-xs tracking-widest uppercase mb-2! px-4! py-1.5! border rounded-full border-gold/30 bg-gold/5">
               Core Values
             </span>
-            <h2 id="values-heading" className="font-display font-800 text-4xl sm:text-5xl text-[var(--color-green-darkest)] mt-4">
+            <h2 id="values-heading" className="font-display font-800 text-4xl! sm:text-5xl! text-green-darkest mt-2!">
               What We Stand For
             </h2>
           </div>
@@ -162,13 +162,13 @@ export default function AboutPage() {
               <div
                 key={v.id}
                 id={v.id}
-                className="p-6 rounded-2xl bg-white border border-[var(--color-green-dark)]/10 hover:border-[var(--color-gold)]/30 hover:shadow-xl hover:shadow-[var(--color-green-dark)]/5 transition-all duration-300 hover:-translate-y-1 group text-center"
+                className="p-6! rounded-2xl bg-white border border-green-dark/10 hover:border-gold/30 hover:shadow-xl hover:shadow-green-dark/5 transition-all duration-300 hover:-translate-y-1 group text-center"
               >
-                <div className="mb-3 flex items-center justify-center text-[var(--color-green-darkest)] group-hover:text-[var(--color-gold)] transition-colors">{v.icon}</div>
-                <h3 className="font-display font-700 text-[var(--color-green-darkest)] group-hover:text-[var(--color-green-mid)] transition-colors mb-2">
+                <div className="mb-3! flex items-center justify-center text-green-darkest group-hover:text-gold transition-colors">{v.icon}</div>
+                <h3 className="font-display font-700 text-green-darkest group-hover:text-green-mid transition-colors mb-2!">
                   {v.title}
                 </h3>
-                <p className="font-body text-sm text-[var(--color-green-darkest)]/55 leading-relaxed">{v.desc}</p>
+                <p className="font-body text-sm text-green-darkest/55 leading-relaxed">{v.desc}</p>
               </div>
             ))}
           </div>
@@ -176,18 +176,18 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="section-padding bg-[var(--color-green-dark)]" aria-label="About CTA">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-display font-800 text-3xl sm:text-4xl text-[var(--color-beige)] mb-4">
+      <section className="section-padding bg-green-dark" aria-label="About CTA">
+        <div className="max-w-3xl! mx-auto! px-4! sm:px-6! lg:px-8! text-center!">
+          <h2 className="font-display font-800 text-3xl sm:text-4xl text-beige mb-4!">
             Let&apos;s Work Together
           </h2>
-          <p className="font-body text-[var(--color-beige)]/60 text-lg mb-8">
+          <p className="font-body text-beige/60 text-lg mb-8!">
             Ready to experience the Bizease difference? Start a conversation with our team today.
           </p>
           <Link
             href="/contact"
             id="about-cta"
-            className="inline-block px-10 py-4 font-display font-700 text-base bg-[var(--color-gold)] text-[var(--color-green-darkest)] rounded-xl hover:bg-[var(--color-gold-light)] transition-all duration-300 hover:shadow-2xl hover:shadow-[var(--color-gold)]/30 hover:-translate-y-1"
+            className="inline-block px-10! py-4! font-display font-700 text-base bg-gold text-green-darkest rounded-xl hover:bg-gold-light transition-all duration-300 hover:shadow-2xl hover:shadow-gold/30 hover:-translate-y-1"
           >
             Get In Touch
           </Link>

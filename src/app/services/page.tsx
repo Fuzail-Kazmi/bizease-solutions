@@ -65,7 +65,7 @@ const services = [
     title: "Financial Advisory",
     tagline: "Financial clarity for confident decisions",
     description:
-      "Our financial advisory practice provides the guidance your business needs to stay healthy, compliant, and strategically positioned — from budgeting to investment planning.",
+      "Our financial advisory practice provides the guidance your business needs to stay healthy, compliant, and strategically positioned from budgeting to investment planning.",
     features: ["Financial Planning & Budgeting", "Investment Advisory", "Tax Compliance", "Cash Flow Management", "Financial Reporting"],
     color: "var(--color-gold)",
   },
@@ -82,21 +82,21 @@ export default function ServicesPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-32 pb-20 bg-gradient-hero overflow-hidden" aria-label="Services hero">
+      <section className="relative pt-32! pb-20! bg-gradient-hero overflow-hidden" aria-label="Services hero">
         <div className="absolute inset-0 geo-bg opacity-30" aria-hidden="true" />
-        <div className="absolute top-24 right-10 w-44 h-44 hex-clip bg-[var(--color-gold)]/8 animate-float" aria-hidden="true" />
-        <div className="absolute bottom-10 left-10 w-28 h-28 hex-clip bg-[var(--color-gold)]/5 animate-float" style={{ animationDelay: "2s" }} aria-hidden="true" />
+        <div className="absolute top-24 right-10 w-44 h-44 hex-clip bg-gold/8 animate-float" aria-hidden="true" />
+        <div className="absolute bottom-10 left-10 w-28 h-28 hex-clip bg-gold/5 animate-float" style={{ animationDelay: "2s" }} aria-hidden="true" />
 
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <span className="inline-block font-display font-500 text-[var(--color-gold)] text-xs tracking-widest uppercase mb-4 px-4 py-1.5 rounded-full border border-[var(--color-gold)]/30 bg-[var(--color-gold)]/10">
+        <div className="relative z-10 max-w-4xl! mx-auto! px-4! sm:px-6! lg:px-8! text-center">
+          <span className="inline-block font-display font-500 text-gold text-xs tracking-widest uppercase px-4! py-1.5! rounded-full border border-gold/30 bg-gold/10">
             Our Services
           </span>
-          <h1 className="font-display font-800 text-5xl sm:text-6xl text-[var(--color-beige)] mt-4 mb-6 leading-tight">
+          <h1 className="font-display font-800 text-5xl sm:text-6xl text-beige mt-4! mb-6! leading-tight">
             Everything Your
             <br />
             <span className="text-gradient-gold">Business Needs</span>
           </h1>
-          <p className="font-body text-[var(--color-beige)]/65 text-xl leading-relaxed max-w-3xl mx-auto">
+          <p className="font-body text-beige/65 text-xl leading-relaxed max-w-3xl! mx-auto!">
             Six specialized service areas. One unified team. Infinite possibilities for your business growth.
           </p>
         </div>
@@ -110,14 +110,14 @@ export default function ServicesPage() {
 
       {/* Services Detail Grid */}
       <section className="section-padding bg-[var(--color-cream)]" aria-labelledby="services-list-heading">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl! mx-auto! px-4! sm:px-6! lg:px-8!">
           <h2 id="services-list-heading" className="sr-only">All Services</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {services.map((service) => (
               <div
                 key={service.id}
                 id={service.id}
-                className="group p-8 rounded-2xl bg-white border border-[var(--color-green-dark)]/10 hover:border-[var(--color-gold)]/30 hover:shadow-2xl hover:shadow-[var(--color-green-dark)]/8 transition-all duration-500 hover:-translate-y-1 relative overflow-hidden"
+                className="group p-8! rounded-2xl bg-white border border-green-dark/10 hover:border-gold/30 hover:shadow-2xl hover:shadow-green-dark/20 transition-all duration-500 hover:-translate-y-1 relative overflow-hidden"
               >
                 {/* BG hex */}
                 <div
@@ -127,31 +127,31 @@ export default function ServicesPage() {
                 />
 
                 {/* Header */}
-                <div className="flex items-start gap-4 mb-5">
+                <div className="flex items-start gap-4 mb-5!">
                   <div
-                    className="w-14 h-14 hex-clip flex items-center justify-center text-2xl flex-shrink-0 transition-transform duration-300 group-hover:scale-110"
+                    className="w-14 h-14 hex-clip flex items-center justify-center text-2xl shrink-0 transition-transform duration-300 group-hover:scale-110"
                     style={{ background: service.color }}
                   >
                     {service.icon}
                   </div>
                   <div>
-                    <h2 className="font-display font-700 text-xl text-[var(--color-green-darkest)] group-hover:text-[var(--color-green-mid)] transition-colors">
+                    <h2 className="font-display font-700 text-xl text-green-darkest group-hover:text-green-mid transition-colors">
                       {service.title}
                     </h2>
-                    <p className="font-body text-sm text-[var(--color-gold)] mt-0.5">{service.tagline}</p>
+                    <p className="font-body text-sm text-gold mt-0.5!">{service.tagline}</p>
                   </div>
                 </div>
 
-                <p className="font-body text-[var(--color-green-darkest)]/60 leading-relaxed text-sm mb-6">
+                <p className="font-body text-green-darkest/60 leading-relaxed text-sm mb-6!">
                   {service.description}
                 </p>
 
                 {/* Features */}
                 <ul className="flex flex-col gap-2">
                   {service.features.map((feature) => (
-                    <li key={feature} className="flex items-center gap-2.5 font-body text-sm text-[var(--color-green-darkest)]/70">
+                    <li key={feature} className="flex items-center gap-2.5 font-body text-sm text-green-darkest/70">
                       <div
-                        className="w-4 h-4 hex-clip flex-shrink-0 flex items-center justify-center"
+                        className="w-4 h-4 hex-clip shrink-0 flex items-center justify-center"
                         style={{ background: service.color }}
                         aria-hidden="true"
                       >
@@ -172,33 +172,33 @@ export default function ServicesPage() {
       {/* Process */}
       <section className="section-padding bg-gradient-section relative overflow-hidden" aria-labelledby="process-heading">
         <div className="absolute inset-0 geo-bg opacity-20" aria-hidden="true" />
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <span className="inline-block font-display font-500 text-[var(--color-gold)] text-xs tracking-widest uppercase mb-3 px-4 py-1.5 rounded-full border border-[var(--color-gold)]/20">
+        <div className="relative z-10 max-w-7xl! mx-auto! px-4! sm:px-6! lg:px-8!">
+          <div className="text-center mb-14!">
+            <span className="inline-block font-display font-500 text-gold text-xs tracking-widest uppercase px-4! py-1.5! rounded-full border border-gold/20">
               How We Work
             </span>
-            <h2 id="process-heading" className="font-display font-800 text-4xl sm:text-5xl text-[var(--color-beige)] mt-4">
+            <h2 id="process-heading" className="font-display font-800 text-4xl sm:text-5xl text-beige mt-4!">
               Our Process
             </h2>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 relative">
             {/* Connector line */}
-            <div className="hidden lg:block absolute top-10 left-[12.5%] right-[12.5%] h-px bg-gradient-to-r from-transparent via-[var(--color-gold)]/30 to-transparent" aria-hidden="true" />
+            <div className="hidden lg:block absolute top-5 left-[12.5%] right-[12.5%] h-px bg-linear-to-r from-transparent via-gold/30 to-transparent" aria-hidden="true" />
 
             {process.map((step, i) => (
               <div
                 key={step.id}
                 id={step.id}
-                className="flex flex-col items-center text-center gap-4 p-6"
+                className="flex flex-col items-center text-center gap-4 p-6!"
               >
                 <div className="relative">
-                  <div className="w-20 h-20 hex-clip bg-[var(--color-green-mid)]/30 border border-[var(--color-gold)]/20 flex items-center justify-center">
+                  <div className="w-20  h-20 hex-clip bg-green-mid/30 border border-gold/20 flex items-center justify-center">
                     <span className="font-display font-800 text-2xl text-gradient-gold">{step.step}</span>
                   </div>
                 </div>
-                <h3 className="font-display font-700 text-[var(--color-beige)] text-lg">{step.title}</h3>
-                <p className="font-body text-[var(--color-beige)]/55 text-sm leading-relaxed">{step.desc}</p>
+                <h3 className="font-display font-700 text-beige text-lg">{step.title}</h3>
+                <p className="font-body text-beige/55 text-sm leading-relaxed">{step.desc}</p>
               </div>
             ))}
           </div>
@@ -206,18 +206,18 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA */}
-      <section className="section-padding bg-[var(--color-cream)]" aria-label="Services CTA">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-display font-800 text-3xl sm:text-4xl text-[var(--color-green-darkest)] mb-4">
+      <section className="section-padding bg-cream" aria-label="Services CTA">
+        <div className="max-w-3xl! mx-auto! px-4! sm:px-6! lg:px-8! text-center!">
+          <h2 className="font-display font-800 text-3xl sm:text-4xl text-green-darkest mb-4!">
             Ready to Get Started?
           </h2>
-          <p className="font-body text-[var(--color-green-darkest)]/60 text-lg mb-8">
-            Tell us your challenge. We&apos;ll craft the perfect solution — fast.
+          <p className="font-body text-green-darkest/60 text-lg mb-8!">
+            Tell us your challenge. We&apos;ll craft the perfect solution fast.
           </p>
           <Link
             href="/contact"
             id="services-cta"
-            className="inline-block px-10 py-4 font-display font-700 text-base bg-[var(--color-green-dark)] text-[var(--color-beige)] rounded-xl hover:bg-[var(--color-green-mid)] hover:shadow-xl hover:shadow-[var(--color-green-dark)]/30 transition-all duration-300 hover:-translate-y-1"
+            className="inline-block px-10! py-4! font-display font-700 text-base bg-green-dark text-beige rounded-xl hover:bg-green-mid hover:shadow-xl hover:shadow-green-dark/30 transition-all duration-300 hover:-translate-y-1"
           >
             Request a Consultation
           </Link>
