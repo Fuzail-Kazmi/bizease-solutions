@@ -4,7 +4,7 @@ import ServicesGrid from "@/components/ServicesGrid";
 import StatsSection from "@/components/StatsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import Link from "next/link";
-import { Target, Link as LinkIcon, TrendingUp, Zap } from "lucide-react";
+import { Target, Link as LinkIcon, TrendingUp, Zap, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Bizease Solutions — All Business Needs Under One Roof",
@@ -17,7 +17,7 @@ const whyUs = [
     id: "why-expert",
     icon: <Target className="w-8 h-8 text-[var(--color-green-dark)]" />,
     title: "Deep Expertise",
-    desc: "Senior-level specialists across every domain — from tech to finance to marketing.",
+    desc: "Senior-level specialists across every domain from tech to finance to marketing.",
   },
   {
     id: "why-unified",
@@ -29,7 +29,7 @@ const whyUs = [
     id: "why-results",
     icon: <TrendingUp className="w-8 h-8 text-[var(--color-green-dark)]" />,
     title: "Results-Driven",
-    desc: "We measure success by your growth — tangible KPIs, not just deliverables.",
+    desc: "We measure success by your growth tangible KPIs, not just deliverables.",
   },
   {
     id: "why-agile",
@@ -46,11 +46,11 @@ export default function HomePage() {
 
       {/* Why Choose Us */}
       <section className="section-padding bg-[var(--color-cream)]" aria-labelledby="why-us-heading">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl! mx-auto! p-4! sm:p-6! lg:p-8!">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Left text */}
             <div>
-              <span className="inline-block font-display font-500 text-[var(--color-gold)] text-xs tracking-widest uppercase mb-4 px-4 py-1.5 rounded-full border border-[var(--color-gold)]/30 bg-[var(--color-gold)]/5">
+              <span className="inline-block font-display font-500 text-[var(--color-gold)] text-xs tracking-widest uppercase rounded-full border border-[var(--color-gold)]/30 bg-[var(--color-gold)]/5">
                 Why Choose Us
               </span>
               <h2
@@ -61,7 +61,7 @@ export default function HomePage() {
                 <span className="block text-[var(--color-green-mid)]">Mission</span>
               </h2>
               <p className="font-body text-[var(--color-green-darkest)]/60 text-lg leading-relaxed mb-8">
-                We don&apos;t just deliver services — we build long-term partnerships.
+                We don&apos;t just deliver services. we build long-term partnerships.
                 Bizease Solutions brings enterprise-grade expertise to businesses of all
                 sizes, helping you scale smarter and faster.
               </p>
@@ -71,16 +71,12 @@ export default function HomePage() {
                 className="inline-flex items-center gap-2 font-display font-600 text-[var(--color-green-mid)] hover:text-[var(--color-gold)] transition-colors duration-300 group"
               >
                 Learn More About Us
-                <svg
+                <div
                   className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth={2}
-                  viewBox="0 0 24 24"
                   aria-hidden="true"
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                </svg>
+                  <ArrowRight size={20}/>
+                </div>
               </Link>
             </div>
 
@@ -90,13 +86,13 @@ export default function HomePage() {
                 <div
                   key={item.id}
                   id={item.id}
-                  className="p-6 rounded-2xl bg-white border border-[var(--color-green-dark)]/10 hover:border-[var(--color-gold)]/30 hover:shadow-xl hover:shadow-[var(--color-green-dark)]/5 transition-all duration-300 hover:-translate-y-1 group"
+                  className="p-2! rounded-2xl bg-white border border-[var(--color-green-dark)]/10 hover:border-[var(--color-gold)]/30 hover:shadow-xl hover:shadow-[var(--color-green-dark)]/5 transition-all duration-300 hover:-translate-y-1 group"
                 >
                   <div className="mb-3 flex items-center justify-center">{item.icon}</div>
                   <h3 className="font-display font-700 text-base text-[var(--color-green-darkest)] mb-1.5 group-hover:text-[var(--color-green-mid)] transition-colors">
                     {item.title}
                   </h3>
-                  <p className="font-body text-sm text-[var(--color-green-darkest)]/55 leading-relaxed">
+                  <p className="font-body text-xs lg:text-sm text-[var(--color-green-darkest)]/55 leading-relaxed">
                     {item.desc}
                   </p>
                 </div>

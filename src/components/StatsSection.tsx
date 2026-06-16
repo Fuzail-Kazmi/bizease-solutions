@@ -3,10 +3,10 @@
 import { useEffect, useRef, useState } from "react";
 
 const stats = [
-  { id: "stat-clients",   value: 150, suffix: "+", label: "Clients Served",       icon: "👥" },
-  { id: "stat-projects",  value: 300, suffix: "+", label: "Projects Delivered",   icon: "🚀" },
-  { id: "stat-years",     value: 8,   suffix: "+", label: "Years of Experience",  icon: "🏆" },
-  { id: "stat-countries", value: 12,  suffix: "",  label: "Countries Reached",    icon: "🌍" },
+  { id: "stat-clients",   value: 150, suffix: "+", label: "Clients Served" },
+  { id: "stat-projects",  value: 300, suffix: "+", label: "Projects Delivered"},
+  { id: "stat-years",     value: 8,   suffix: "+", label: "Years of Experience" },
+  { id: "stat-countries", value: 12,  suffix: "",  label: "Countries Reached"},
 ];
 
 function useCountUp(target: number, duration: number, start: boolean) {
@@ -81,7 +81,7 @@ export default function StatsSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative bg-gradient-section py-20 overflow-hidden"
+      className="relative bg-gradient-section overflow-hidden"
       aria-labelledby="stats-heading"
     >
       {/* Background hex decorations */}
@@ -89,10 +89,10 @@ export default function StatsSection() {
       <div className="absolute -top-8 -left-8 w-48 h-48 hex-clip bg-[var(--color-gold)]/5" aria-hidden="true" />
       <div className="absolute -bottom-8 -right-8 w-48 h-48 hex-clip bg-[var(--color-gold)]/5" aria-hidden="true" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 max-w-7xl! mx-auto! p-4! sm:p-6! lg:p-8!">
         <h2
           id="stats-heading"
-          className={`font-display font-700 text-center text-[var(--color-beige)]/40 text-xs tracking-widest uppercase mb-10 transition-all duration-700 ${
+          className={`font-display font-700 text-center text-[var(--color-beige)]/40 text-xs tracking-widest uppercase mb-10! transition-all duration-700 ${
             isVisible ? "opacity-100" : "opacity-0"
           }`}
         >

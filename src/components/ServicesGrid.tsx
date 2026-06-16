@@ -92,9 +92,9 @@ export default function ServicesGrid() {
 
   return (
     <section className="section-padding bg-[var(--color-cream)]" aria-labelledby="services-heading">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl! mx-auto! p-4! sm:p-6! lg:p-8!">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="flex justify-center items-center flex-col text-center space-y-4 gap-4 mb-16!">
           <span className="inline-block font-display font-500 text-[var(--color-gold)] text-xs tracking-widest uppercase mb-3 px-4 py-1.5 rounded-full border border-[var(--color-gold)]/30 bg-[var(--color-gold)]/5">
             What We Offer
           </span>
@@ -120,7 +120,7 @@ export default function ServicesGrid() {
               key={service.id}
               id={service.id}
               ref={(el) => { cardRefs.current[i] = el; }}
-              className={`group relative p-7 rounded-2xl border border-[var(--color-green-dark)]/10 bg-white hover:border-[var(--color-gold)]/30 hover:shadow-2xl hover:shadow-[var(--color-green-dark)]/10 cursor-default transition-all duration-500 hover:-translate-y-2 ${
+              className={`group relative px-4! py-3! space-y-2! rounded-2xl border border-[var(--color-green-dark)]/10 bg-white hover:border-[var(--color-gold)]/30 hover:shadow-2xl hover:shadow-[var(--color-green-dark)]/10 cursor-default transition-all duration-500 hover:-translate-y-2 ${
                 visibleCards.has(i)
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-8"
