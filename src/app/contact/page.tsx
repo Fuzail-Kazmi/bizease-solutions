@@ -17,8 +17,8 @@ const contactInfo = [
       </svg>
     ),
     label: "Email Us",
-    value: "info@bizease.solutions",
-    href: "mailto:info@bizease.solutions",
+    value: "info.bizeasesolutions@gmail.com",
+    href: "mailto:info.bizeasesolutions@gmail.com",
   },
   {
     id: "contact-phone",
@@ -28,8 +28,8 @@ const contactInfo = [
       </svg>
     ),
     label: "Call Us",
-    value: "+92 300 0000000",
-    href: "tel:+923000000000",
+    value: "+92 3350388841",
+    href: "tel: +923350388841",
   },
   {
     id: "contact-location",
@@ -40,20 +40,20 @@ const contactInfo = [
       </svg>
     ),
     label: "Visit Us",
-    value: "Karachi, Pakistan",
+    value: "Islamabad, Pakistan",
     href: "#",
   },
-  {
-    id: "contact-hours",
-    icon: (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
-    ),
-    label: "Business Hours",
-    value: "Mon – Sat, 9 AM – 6 PM PKT",
-    href: "#",
-  },
+  // {
+  //   id: "contact-hours",
+  //   icon: (
+  //     <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+  //       <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+  //     </svg>
+  //   ),
+  //   label: "Business Hours",
+  //   value: "Mon – Sat, 9 AM – 6 PM PKT",
+  //   href: "#",
+  // },
 ];
 
 const faqs = [
@@ -83,7 +83,9 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-32! pb-20! bg-gradient-hero overflow-hidden" aria-label="Contact hero">
+      <section className="relative pt-32! pb-20! bg-green-darkest overflow-hidden" aria-label="Contact hero">
+        <img src="./images/contact-pg_carousel.avif" alt="Contact Bizease" className="absolute inset-0 w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-black/60" />
         <div className="absolute inset-0 geo-bg opacity-30" aria-hidden="true" />
         <div className="absolute top-24 right-12 w-36 h-36 hex-clip bg-gold/8 animate-float" aria-hidden="true" />
         <div className="absolute bottom-8 left-8 w-24 h-24 hex-clip bg-gold/5 animate-float" style={{ animationDelay: "1s" }} aria-hidden="true" />
@@ -109,11 +111,9 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Main content */}
       <section className="section-padding bg-cream" aria-labelledby="contact-form-heading">
         <div className="max-w-7xl! mx-auto! px-4! sm:px-6! lg:px-8!">
           <div className="grid lg:grid-cols-5 gap-12">
-            {/* Form — 3 cols */}
             <div className="lg:col-span-3">
               <div className="bg-white rounded-2xl border border-green-dark/10 p-8! sm:p-10! shadow-sm">
                 <h2 id="contact-form-heading" className="font-display font-700 text-2xl text-green-darkest mb-2">
@@ -126,9 +126,7 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Info — 2 cols */}
             <div className="lg:col-span-2 flex flex-col gap-6">
-              {/* Contact Info Cards */}
               <div className="bg-green-darkest rounded-2xl p-8! relative overflow-hidden">
                 <div className="absolute top-4 right-4 w-16 h-16 hex-clip bg-gold/8" aria-hidden="true" />
                 <h3 className="font-display font-700 text-beige text-lg mb-6!">
@@ -158,7 +156,6 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* Quick Response Badge */}
               <div className="bg-white rounded-2xl border border-green-dark/10 p-6! flex items-center gap-4">
                 <div className="w-14 h-14 hex-clip bg-gold/10 flex items-center justify-center shrink-0">
                   <Zap className="w-6 h-6 text-gold" />
@@ -173,7 +170,6 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* Free Consultation */}
               <div className="bg-linear-to-br from-green-dark to-green-mid rounded-2xl p-6! text-center!">
                 <div className="flex justify-center mb-3!">
                   <Target className="w-8 h-8 text-gold" />

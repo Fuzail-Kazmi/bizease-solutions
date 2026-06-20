@@ -3,6 +3,7 @@ import { Outfit, Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const outfit = Outfit({
   variable: "--font-display",
@@ -20,13 +21,13 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Bizease Solutions — All Business Needs Under One Roof",
-    template: "%s | Bizease Solutions",
+    default: "BizEase Solutions - All Business Needs Under One Roof",
+    template: "%s | BizEase Solutions",
   },
   description:
-    "Bizease Solutions (BE Solutions) is a modern B2B business solutions company providing expert services in IT, consulting, marketing, and operations — all under one roof.",
+    "BizEase Solutions (BE Solutions) is a modern B2B business solutions company providing expert services in IT, consulting, marketing, and operations — all under one roof.",
   keywords: [
-    "Bizease Solutions",
+    "BizEase Solutions",
     "BE Solutions",
     "business solutions",
     "IT services",
@@ -34,14 +35,14 @@ export const metadata: Metadata = {
     "digital transformation",
     "B2B services",
   ],
-  authors: [{ name: "Bizease Solutions" }],
-  creator: "Bizease Solutions",
+  authors: [{ name: "BizEase Solutions" }],
+  creator: "BizEase Solutions",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://bizease-solutions.vercel.app",
-    siteName: "Bizease Solutions",
-    title: "Bizease Solutions — All Business Needs Under One Roof",
+    siteName: "BizEase Solutions",
+    title: "BizEase Solutions — All Business Needs Under One Roof",
     description:
       "Modern B2B business solutions — IT, consulting, marketing, and operations all under one roof.",
     images: [
@@ -49,13 +50,13 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Bizease Solutions",
+        alt: "BizEase Solutions",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Bizease Solutions",
+    title: "BizEase Solutions",
     description: "All business needs under one roof.",
   },
   robots: {
@@ -71,10 +72,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${outfit.variable} ${inter.variable}`}>
-      <body className="min-h-screen flex flex-col antialiased bg-[var(--color-cream)]">
+      <body className="min-h-screen flex flex-col antialiased bg-cream">
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
+        <WhatsAppButton />
       </body>
     </html>
   );

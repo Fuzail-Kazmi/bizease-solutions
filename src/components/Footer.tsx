@@ -9,16 +9,18 @@ const footerLinks = {
     { label: "Contact", href: "/contact" },
   ],
   Services: [
-    { label: "IT Consulting", href: "/services" },
-    { label: "Digital Transformation", href: "/services" },
-    { label: "Business Strategy", href: "/services" },
-    { label: "Marketing Solutions", href: "/services" },
-    { label: "Operations & HR", href: "/services" },
+    { label: "Accounting & Bookkeeping", href: "/services" },
+    { label: "Taxation Services", href: "/services" },
+    { label: "Registration & Compliance", href: "/services" },
+    { label: "Audit & Internal Controls", href: "/services" },
+    { label: "IT & Tech Solutions", href: "/services" },  
+    { label: "HR & Payroll Services", href: "/services" },  
+    { label: "Digital Marketing", href: "/services" },  
   ],
   Contact: [
-    { label: "info@bizease.solutions", href: "mailto:info@bizease.solutions" },
-    { label: "+92 300 0000000", href: "tel:+923000000000" },
-    { label: "Karachi, Pakistan", href: "#" },
+    { label: "info.bizeasesolutions@gmail.com", href: "mailto:info.bizeasesolutions@gmail.com" },
+    { label: "+92 3350388841", href: "tel:+923350388841" },
+    { label: "Islamabad, Pakistan", href: "#" },
   ],
 };
 
@@ -27,7 +29,6 @@ export default function Footer() {
 
   return (
     <footer className="bg-[var(--color-green-darkest)] relative overflow-hidden">
-      {/* Decorative hexagons */}
       <div
         className="absolute top-8 right-16 w-32 h-32 hex-clip opacity-5 bg-[var(--color-gold)]"
         aria-hidden="true"
@@ -37,12 +38,10 @@ export default function Footer() {
         aria-hidden="true"
       />
 
-      {/* Top Border */}
       <div className="h-px bg-gradient-to-r from-transparent via-[var(--color-gold)]/40 to-transparent" />
 
       <div className="max-w-7xl! mx-auto! px-4! sm:px-6! lg:px-8! py-6!">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 py-4!">
-          {/* Brand Column */}
           <div className="lg:col-span-1 space-y-4!">
             <Link href="/" className="flex items-center gap-3 mb-5 group">
               <div className="relative w-12 h-12 transition-transform duration-300 group-hover:scale-110">
@@ -128,7 +127,6 @@ export default function Footer() {
           ))}
         </div>
 
-        {/* Bottom Bar */}
         <div className="mt-14! pt-6! border-t border-[var(--color-gold)]/10 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-[var(--color-beige)]/40 text-xs text-center sm:text-left">
             © {year} Bizease Solutions. All rights reserved.

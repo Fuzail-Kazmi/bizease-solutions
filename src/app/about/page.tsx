@@ -30,7 +30,9 @@ export default function AboutPage() {
   return (
     <>
       {/* Page Hero */}
-      <section className="relative pt-32! pb-20! bg-gradient-hero overflow-hidden!" aria-label="About hero">
+      <section className="relative pt-32! pb-20! bg-green-darkest overflow-hidden" aria-label="About hero">
+        <img src="./images/about-pg_carousel.avif" alt="About Bizease" className="absolute inset-0 w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-black/60" />
         <div className="absolute inset-0 geo-bg opacity-30" aria-hidden="true" />
         <div className="absolute top-20 right-16 w-40 h-40 hex-clip bg-gold/8 animate-float" aria-hidden="true" />
         <div className="absolute bottom-10 left-10 w-24 h-24 hex-clip bg-gold/6 animate-float" style={{ animationDelay: "1.5s" }} aria-hidden="true" />
@@ -45,7 +47,7 @@ export default function AboutPage() {
             <span className="text-gradient-gold">Business Complexity</span>
           </h1>
           <p className="font-body text-beige/65 text-xl leading-relaxed max-w-3xl! mx-auto!">
-            Bizease Solutions was born from a simple belief: businesses shouldn&apos;t have to
+            BizEase Solutions was born from a simple belief: businesses shouldn&apos;t have to
             juggle dozens of vendors for core functions. We bring it all together under
             one roof, with one dedicated team.
           </p>
@@ -73,9 +75,7 @@ export default function AboutPage() {
               </div>
               <h2 id="mission-heading" className="font-display font-700 text-2xl text-gold mb-4!">Our Mission</h2>
               <p className="font-body text-beige/70 leading-relaxed text-lg">
-                To empower businesses of every size with comprehensive, high-impact solutions
-                that drive sustainable growth delivered through a single, trusted partnership
-                that spans technology, strategy, marketing, and operations.
+                To empower businesses with integrated solutions, smart technology, and professional expertise for sustainable growth. 
               </p>
             </div>
 
@@ -90,9 +90,7 @@ export default function AboutPage() {
               </div>
               <h2 className="font-display font-700 text-2xl text-green-darkest mb-4!">Our Vision</h2>
               <p className="font-body text-green-darkest/60 leading-relaxed text-lg">
-                To become the region&apos;s most trusted unified business solutions platform
-                where every organization, from startup to enterprise, can access world-class
-                expertise without complexity or compromise.
+                To provide all-in-one business solutions that simplify operations, ensure compliance, and help organizations achieve success with confidence.
               </p>
             </div>
           </div>

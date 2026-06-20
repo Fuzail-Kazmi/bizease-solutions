@@ -76,7 +76,6 @@ export default function Navbar() {
       >
         <div className="max-w-7xl! mx-auto! px-4! sm:px-6! lg:px-8!">
           <div className="flex! items-center! justify-between! h-16!">
-            {/* Logo */}
             <Link href="/" className="flex items-center gap-3 mb-5 group" aria-label="Bizease Solutions Home">
               <div className="relative w-12 h-12 transition-transform duration-300 group-hover:scale-110">
                 <Image
@@ -89,7 +88,7 @@ export default function Navbar() {
               </div>
               <div className="flex flex-col leading-tight">
 
-                <span className={`font-display font-800 text-lg tracking-wide ${isScrolled || !isHome ? "text-beige" : "text-green-darkest/60"}`}>
+                <span className={`font-display font-800 text-lg tracking-wide ${isScrolled || !isHome ? "text-beige" : "text-beige-light/60"}`}>
                   BIZEASE
                 </span>
                 <span className="font-display font-500 text-xs text-gold tracking-[0.2em] uppercase">

@@ -2,14 +2,13 @@ import type { Metadata } from "next";
 import HeroSection from "@/components/HeroSection";
 import ServicesGrid from "@/components/ServicesGrid";
 import StatsSection from "@/components/StatsSection";
-import TestimonialsSection from "@/components/TestimonialsSection";
 import Link from "next/link";
-import { Target, Link as LinkIcon, TrendingUp, Zap, ArrowRight } from "lucide-react";
+import { Target, Link as LinkIcon, TrendingUp, Zap, ArrowRight, CheckCircle2, PieChart } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Bizease Solutions — All Business Needs Under One Roof",
+  title: "BizEase Solutions - All Business Needs Under One Roof",
   description:
-    "Bizease Solutions is a leading B2B business solutions provider offering IT consulting, digital marketing, business strategy, software development, HR & operations, and financial advisory.",
+    "BizEase Solutions is a leading B2B business solutions provider offering IT consulting, digital marketing, business strategy, software development, HR & operations, and financial advisory.",
 };
 
 const whyUs = [
@@ -44,59 +43,62 @@ export default function HomePage() {
     <>
       <HeroSection />
 
-      {/* Why Choose Us */}
-      <section className="section-padding bg-cream" aria-labelledby="why-us-heading">
+       <section className="section-padding bg-cream" aria-labelledby="why-us-heading">
         <div className="max-w-7xl! mx-auto! p-4! sm:p-6! lg:p-8!">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* Left text */}
-            <div>
-              <span className="inline-block font-display font-500 text-gold text-xs tracking-widest uppercase mb-2! px-4! py-1.5! rounded-full border border-gold/30 bg-gold/10">
-                Why Choose Us
-              </span>
-              <h2
-                id="why-us-heading"
-                className="font-display font-800 text-4xl sm:text-5xl text-green-darkest mb-4! leading-tight"
-              >
-                Your Growth Is Our
-                <span className="block text-green-mid">Mission</span>
-              </h2>
-              <p className="font-body text-green-darkest/60 text-lg leading-relaxed mb-8!">
-                We don&apos;t just deliver services. we build long-term partnerships.
-                Bizease Solutions brings enterprise-grade expertise to businesses of all
-                sizes, helping you scale smarter and faster.
-              </p>
-              <Link
-                href="/about"
-                id="home-about-link"
-                className="inline-flex items-center gap-2 font-display font-600 text-green-mid hover:text-gold transition-colors duration-300 group"
-              >
-                Learn More About Us
-                <div
-                  className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"
-                  aria-hidden="true"
-                >
-                  <ArrowRight size={20}/>
-                </div>
-              </Link>
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div className="relative h-112.5 sm:h-150 w-full">
+              <img src="./images/home-pg_img1.avif" alt="Team Meeting" className="absolute top-0 left-0 w-[85%] h-[85%] object-cover rounded-3xl shadow-xl" />
+              <img src="./images/home-pg_img2.avif" alt="Office Work" className="absolute bottom-0 right-0 w-[60%] h-[50%] object-cover rounded-3xl border-10 border-cream shadow-2xl" />
             </div>
 
-            {/* Right grid */}
-            <div className="grid grid-cols-2 gap-4">
-              {whyUs.map((item) => (
-                <div
-                  key={item.id}
-                  id={item.id}
-                  className="p-2! rounded-2xl bg-white border border-green-dark/10 hover:border-gold/30 hover:shadow-xl hover:shadow-green-dark/5 transition-all duration-300 hover:-translate-y-1 group"
-                >
-                  <div className="mb-3! flex items-center justify-center">{item.icon}</div>
-                  <h3 className="font-display font-700 text-base text-green-darkest mb-1.5 group-hover:text-green-mid transition-colors">
-                    {item.title}
-                  </h3>
-                  <p className="font-body text-xs lg:text-sm text-green-darkest/55 leading-relaxed">
-                    {item.desc}
-                  </p>
+            <div>
+              <div className="flex items-center gap-4 mb-4!">
+                <div className="h-px w-12 bg-green-dark" />
+                <span className="font-display font-600 text-green-dark text-sm tracking-widest uppercase">
+                  ABOUT US
+                </span>
+              </div>
+              
+              <h2
+                id="why-us-heading"
+                className="font-display font-800 text-4xl sm:text-5xl text-green-darkest mb-6! leading-tight"
+              >
+                Your Complete <span className="text-green-mid">Accounting</span> And Financial Solutions
+              </h2>
+              
+              <p className="font-body text-green-darkest/70 text-base leading-relaxed mb-8!">
+                BizEase Solutions goes beyond traditional service delivery. We provide comprehensive business strategies, empowering your organization to grow with confidence through tailored financial, IT, and operational expertise.
+              </p>
+
+              <ul className="flex flex-col gap-4 mb-8!">
+                {[
+                  "Take a look at our round-up of the best solutions",
+                  "Seven specialized service areas to cover every aspect of your business",
+                  "A single, trusted partner for all your business needs",
+                ].map((feature, i) => (
+                  <li key={i} className="flex items-center gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-green-mid shrink-0" />
+                    <span className="font-body text-sm text-green-darkest/80">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <div className="flex items-center gap-6 p-6! bg-white rounded-2xl border border-green-dark/10 shadow-sm mb-8!">
+                <div className="w-12 h-12 flex items-center justify-center bg-green-light/20 rounded-full text-green-mid shrink-0">
+                  <PieChart className="w-6 h-6" />
                 </div>
-              ))}
+                <p className="font-display font-600 text-green-darkest text-sm leading-relaxed">
+                  We Provides all Kinds of Accounting And Financial Solutions That Increase Your Success.
+                </p>
+              </div>
+
+              <Link
+                href="/about"
+                className="inline-flex items-center justify-center gap-2 px-8! py-4! font-display font-600 text-sm bg-green-mid text-white rounded-xl hover:bg-green-dark transition-all duration-300 hover:shadow-xl hover:shadow-green-dark/20 hover:-translate-y-1 group"
+              >
+                DISCOVER MORE
+                <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+              </Link>
             </div>
           </div>
         </div>
@@ -104,7 +106,6 @@ export default function HomePage() {
 
       <StatsSection />
       <ServicesGrid />
-      {/* <TestimonialsSection /> */}
 
       {/* CTA Banner */}
       <section
