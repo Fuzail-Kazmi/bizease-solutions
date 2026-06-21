@@ -112,21 +112,39 @@ export default function ContactPage() {
       </section>
 
       <section className="section-padding bg-cream" aria-labelledby="contact-form-heading">
-        <div className="max-w-7xl! mx-auto! px-4! sm:px-6! lg:px-8!">
-          <div className="grid lg:grid-cols-5 gap-12">
-            <div className="lg:col-span-3">
-              <div className="bg-white rounded-2xl border border-green-dark/10 p-8! sm:p-10! shadow-sm">
-                <h2 id="contact-form-heading" className="font-display font-700 text-2xl text-green-darkest mb-2">
-                  Send Us a Message
-                </h2>
-                <p className="font-body text-green-darkest/55 text-sm mb-8!">
-                  Fill out the form below and we&apos;ll get back to you within 24 hours.
-                </p>
-                <ContactForm />
+        <div className="max-w-6xl! mx-auto! px-4! sm:px-6! lg:px-8!">
+          <div className="grid items-start gap-8 lg:grid-cols-[minmax(340px,430px)_minmax(0,1fr)] xl:gap-10">
+            <div className="flex justify-center lg:justify-end">
+              <div className="relative w-full max-w-[430px] rounded-[2.4rem] border border-green-darkest/25 bg-green-darkest p-2.5! shadow-2xl shadow-green-darkest/20">
+                <div className="absolute -left-1.5 top-28 h-14 w-1.5 rounded-l-full bg-green-darkest/80" aria-hidden="true" />
+                <div className="absolute -left-1.5 top-48 h-20 w-1.5 rounded-l-full bg-green-darkest/80" aria-hidden="true" />
+                <div className="absolute -right-1.5 top-40 h-24 w-1.5 rounded-r-full bg-green-darkest/80" aria-hidden="true" />
+                <div className="absolute left-1/2 top-4 z-20 flex h-7 w-32 -translate-x-1/2 items-center justify-center gap-2 rounded-full bg-green-darkest shadow-sm" aria-hidden="true">
+                  <span className="h-1.5 w-12 rounded-full bg-beige/25" />
+                  <span className="h-2 w-2 rounded-full bg-gold/50" />
+                </div>
+                <div className="relative overflow-hidden rounded-[1.9rem] border border-beige/20 bg-cream px-5! pb-6! pt-14! sm:px-6!">
+                  <div className="absolute -right-8 -top-8 h-28 w-28 hex-clip bg-gold/10" aria-hidden="true" />
+                  <div className="absolute -left-10 top-24 h-24 w-24 hex-clip bg-green-mid/10" aria-hidden="true" />
+
+                  <div className="relative z-10 mb-6! border-b border-green-dark/10 pb-5! text-center">
+                    <span className="inline-block font-display font-500 text-gold text-xs tracking-widest uppercase mb-3!">
+                      Start a Conversation
+                    </span>
+                    <h2 id="contact-form-heading" className="font-display font-700 text-2xl text-green-darkest mb-2!">
+                      Send Us a Message
+                    </h2>
+                    <p className="font-body text-green-darkest/55 text-sm leading-relaxed">
+                      Fill out the form below and we&apos;ll get back to you within 24 hours.
+                    </p>
+                  </div>
+
+                  <ContactForm />
+                </div>
               </div>
             </div>
 
-            <div className="lg:col-span-2 flex flex-col gap-6">
+            <div className="flex flex-col gap-6">
               <div className="bg-green-darkest rounded-2xl p-8! relative overflow-hidden">
                 <div className="absolute top-4 right-4 w-16 h-16 hex-clip bg-gold/8" aria-hidden="true" />
                 <h3 className="font-display font-700 text-beige text-lg mb-6!">

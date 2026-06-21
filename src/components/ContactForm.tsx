@@ -12,16 +12,6 @@ type FormState = {
 
 type FormErrors = Partial<FormState>;
 
-const serviceOptions = [
-  "IT Consulting",
-  "Digital Marketing",
-  "Business Strategy",
-  "Software Development",
-  "HR & Operations",
-  "Financial Advisory",
-  "Other",
-];
-
 function validate(data: FormState): FormErrors {
   const errors: FormErrors = {};
   if (!data.name.trim()) errors.name = "Name is required.";
@@ -73,9 +63,9 @@ export default function ContactForm() {
   };
 
   const inputBase =
-    "w-full px-4! py-3.5! rounded-xl bg-[var(--color-green-mid)]/10 border text-[var(--color-green-darkest)] font-body text-sm placeholder:text-[var(--color-green-darkest)]/40 focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)]/40 transition-all duration-200";
+    "w-full px-4! py-3! rounded-2xl bg-white/80 border text-[var(--color-green-darkest)] font-body text-sm placeholder:text-[var(--color-green-darkest)]/35 focus:outline-none focus:ring-2 focus:ring-[var(--color-gold)]/40 transition-all duration-200";
   const inputNormal = `${inputBase} border-[var(--color-green-dark)]/20 focus:border-[var(--color-gold)]/40`;
-  const inputError = `${inputBase} border-red-400/60 focus:border-red-400/80 bg-red-50/20`;
+  const inputError = `${inputBase} border-red-400/60 focus:border-red-400/80 bg-red-50/80`;
 
   if (status === "success") {
     return (
@@ -107,11 +97,11 @@ export default function ContactForm() {
       id="contact-form"
       onSubmit={handleSubmit}
       noValidate
-      className="flex flex-col gap-5"
+      className="relative z-10 flex flex-col gap-4"
       aria-label="Contact form"
     >
       {/* Row 1 */}
-      <div className="grid sm:grid-cols-2 gap-5">
+      <div className="grid gap-4">
         <div className="flex flex-col gap-1.5">
           <label htmlFor="contact-name" className="font-display font-500 text-sm text-[var(--color-green-darkest)]/80">
             Full Name <span className="text-[var(--color-gold)]">*</span>
@@ -158,7 +148,7 @@ export default function ContactForm() {
       </div>
 
       {/* Row 2 */}
-      <div className="grid sm:grid-cols-2 gap-5">
+      <div className="grid gap-4">
         <div className="flex flex-col gap-1.5">
           <label htmlFor="contact-company" className="font-display font-500 text-sm text-[var(--color-green-darkest)]/80">
             Company <span className="text-[var(--color-green-darkest)]/30 text-xs font-normal">(optional)</span>
@@ -220,7 +210,7 @@ export default function ContactForm() {
         <textarea
           id="contact-message"
           name="message"
-          rows={5}
+          rows={4}
           value={form.message}
           onChange={handleChange}
           placeholder="Tell us about your project or requirements…"
@@ -240,7 +230,7 @@ export default function ContactForm() {
         id="contact-submit"
         type="submit"
         disabled={status === "loading"}
-        className="w-full py-2! px-4! font-display font-700 text-base bg-green-dark text-beige rounded-xl hover:bg-green-mid hover:shadow-xl hover:shadow-(--color-green-dark)/30 hover:-translate-y-0.5 transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center gap-3"
+        className="mt-2! w-full py-3.5! px-4! font-display font-700 text-base bg-green-dark text-beige rounded-2xl hover:bg-green-mid hover:shadow-xl hover:shadow-(--color-green-dark)/30 hover:-translate-y-0.5 transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center gap-3"
         aria-live="polite"
       >
         {status === "loading" ? (
