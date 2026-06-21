@@ -5,8 +5,8 @@ import { useState, useRef } from "react";
 type FormState = {
   name: string;
   email: string;
+  phone: number | string;
   company: string;
-  service: string;
   message: string;
 };
 
@@ -40,8 +40,8 @@ export default function ContactForm() {
   const [form, setForm] = useState<FormState>({
     name: "",
     email: "",
+    phone: "",
     company: "",
-    service: "",
     message: "",
   });
   const [errors, setErrors] = useState<FormErrors>({});
@@ -69,7 +69,7 @@ export default function ContactForm() {
     // Simulate API call
     await new Promise((r) => setTimeout(r, 1800));
     setStatus("success");
-    setForm({ name: "", email: "", company: "", service: "", message: "" });
+    setForm({ name: "", email: "", phone: "", company: "", message: "" });
   };
 
   const inputBase =
@@ -80,20 +80,20 @@ export default function ContactForm() {
   if (status === "success") {
     return (
       <div className="flex flex-col items-center justify-center py-16! text-center gap-6">
-        <div className="w-20 h-20 hex-clip bg-[var(--color-green-dark)] flex items-center justify-center animate-bounce-gentle">
-          <svg className="w-8 h-8 text-[var(--color-gold)]" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+        <div className="w-20 h-20 hex-clip bg-green-dark flex items-center justify-center animate-bounce-gentle">
+          <svg className="w-8 h-8 text-gold" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
           </svg>
         </div>
-        <h3 className="font-display font-700 text-2xl text-[var(--color-green-darkest)]">
+        <h3 className="font-display font-700 text-2xl text-green-darkest">
           Message Sent!
         </h3>
-        <p className="font-body text-[var(--color-green-darkest)]/60 max-w-sm">
+        <p className="font-body text-green-darkest/60 max-w-sm">
           Thank you for reaching out. Our team will get back to you within 24 hours.
         </p>
         <button
           onClick={() => setStatus("idle")}
-          className="mt-2! px-6! py-3! font-display font-600 text-sm bg-[var(--color-gold)] text-[var(--color-green-darkest)] rounded-xl hover:bg-[var(--color-gold-light)] transition-all duration-200"
+          className="mt-2! px-6! py-3! font-display font-600 text-sm bg-color-gold text-green-darkest rounded-xl hover:bg-gold-light transition-all duration-200"
         >
           Send Another Message
         </button>
@@ -175,7 +175,24 @@ export default function ContactForm() {
         </div>
 
         <div className="flex flex-col gap-1.5">
-          <label htmlFor="contact-service" className="font-display font-500 text-sm text-[var(--color-green-darkest)]/80">
+          <label htmlFor="contact-phone" className="font-display font-500 text-sm text-[var(--color-green-darkest)]/80">
+            Phone <span className="text-[var(--color-green-darkest)]/30 text-xs font-normal">(optional)</span>
+          </label>
+          <input
+            id="contact-phone"
+            name="phone"
+            type="tel"
+            value={form.phone}
+            onChange={handleChange}
+            placeholder="Your phone number"
+            className={inputNormal}
+          />
+        </div>
+      </div>
+
+      {/* Row 3 */}
+      {/* <div className="flex flex-col gap-1.5">
+        <label htmlFor="contact-service" className="font-display font-500 text-sm text-[var(--color-green-darkest)]/80">
             Service Interested In
           </label>
           <select
@@ -193,12 +210,12 @@ export default function ContactForm() {
             ))}
           </select>
         </div>
-      </div>
+      </div> */}
 
       {/* Message */}
       <div className="flex flex-col gap-1.5">
-        <label htmlFor="contact-message" className="font-display font-500 text-sm text-[var(--color-green-darkest)]/80">
-          Message <span className="text-[var(--color-gold)]">*</span>
+        <label htmlFor="contact-message" className="font-display font-500 text-sm text-green-darkest/80">
+          Message <span className="text-gold">*</span>
         </label>
         <textarea
           id="contact-message"
@@ -223,7 +240,7 @@ export default function ContactForm() {
         id="contact-submit"
         type="submit"
         disabled={status === "loading"}
-        className="w-full py-2! px-4! font-display font-700 text-base bg-[var(--color-green-dark)] text-[var(--color-beige)] rounded-xl hover:bg-[var(--color-green-mid)] hover:shadow-xl hover:shadow-[var(--color-green-dark)]/30 hover:-translate-y-0.5 transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center gap-3"
+        className="w-full py-2! px-4! font-display font-700 text-base bg-green-dark text-beige rounded-xl hover:bg-green-mid hover:shadow-xl hover:shadow-(--color-green-dark)/30 hover:-translate-y-0.5 transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center gap-3"
         aria-live="polite"
       >
         {status === "loading" ? (

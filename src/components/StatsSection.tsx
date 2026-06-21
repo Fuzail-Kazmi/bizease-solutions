@@ -6,7 +6,7 @@ const stats = [
   { id: "stat-clients",   value: 150, suffix: "+", label: "Clients Served" },
   { id: "stat-projects",  value: 300, suffix: "+", label: "Projects Delivered"},
   { id: "stat-years",     value: 8,   suffix: "+", label: "Years of Experience" },
-  { id: "stat-countries", value: 12,  suffix: "",  label: "Countries Reached"},
+  // { id: "stat-countries", value: 12,  suffix: "",  label: "Countries Reached"},
 ];
 
 function useCountUp(target: number, duration: number, start: boolean) {
@@ -98,7 +98,7 @@ export default function StatsSection() {
           Our Impact in Numbers
         </h2>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-y lg:divide-y-0 divide-gold/10">
+        <div className="flex flex-wrap gap-8 justify-center divide-gold/10">
           {stats.map((stat, i) => (
             <StatCard key={stat.id} stat={stat} index={i} isVisible={isVisible} />
           ))}

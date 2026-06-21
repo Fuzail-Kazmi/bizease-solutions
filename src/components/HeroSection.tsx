@@ -69,7 +69,7 @@ export default function HeroSection() {
       <div className="relative z-10 max-w-7xl! mx-auto! px-4! sm:px-6! lg:px-8! pt-20 sm:pt-25! sm:pb-8!">
         <div className="items-center grid lg:grid-cols-2 gap-12">
           <div className="flex flex-col gap-4 text-center lg:text-left">
-            <div
+            {/* <div
               className={`inline-flex self-center lg:self-start items-center gap-2 px-4! py-1.5! rounded-full border border-gold/30 bg-black/40 backdrop-blur-md transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
                 }`}
             >
@@ -77,7 +77,7 @@ export default function HeroSection() {
               <span className="font-display font-500 text-gold text-xs tracking-widest uppercase">
                 BE Solutions
               </span>
-            </div>
+            </div> */}
 
             <h1
               className={`font-display font-800 text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[1.1] text-white drop-shadow-xl transition-all duration-700 delay-100 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
